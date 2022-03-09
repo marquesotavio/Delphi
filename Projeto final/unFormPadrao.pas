@@ -23,13 +23,14 @@ type
     PageControl1: TPageControl;
     tsGrid: TTabSheet;
     tsCadastro: TTabSheet;
-    DBGrid: TDBGrid;
-    ds: TDataSource;
-    cds: TClientDataSet;
+    DBGrid1: TDBGrid;
     procedure btnIncluirClick(Sender: TObject);
     procedure btnExcluirClick(Sender: TObject);
     procedure btnAlterarClick(Sender: TObject);
     procedure btnFecharClick(Sender: TObject);
+    procedure btnSalvarClick(Sender: TObject);
+    procedure btnCancelarClick(Sender: TObject);
+    procedure FormActivate(Sender: TObject);
   private
     { Private declarations }
     procedure HabilitaBotoes;
@@ -59,14 +60,42 @@ procedure TfrmBase.btnIncluirClick(Sender: TObject);
 begin
   HabilitaBotoes;
   StatusBar.Panels[0].Text:=('Mensagens: Incluindo Registro.');
+  PageControl1.ActivePage:= tsCadastro;
+end;
+
+procedure TfrmBase.btnSalvarClick(Sender: TObject);
+begin
+  btnIncluir.Enabled := True;
+  btnAlterar.Enabled := True;
+  btnExcluir.Enabled := True;
+  btnSalvar.Enabled := False;
+  btnCancelar.Enabled := False;
+  btnFechar.Enabled := True;
+  PageControl1.ActivePage := tsGrid;
+end;
+
+procedure TfrmBase.FormActivate(Sender: TObject);
+begin
+  PageControl1.ActivePage := tsGrid;
 end;
 
 procedure TfrmBase.btnAlterarClick(Sender: TObject);
 begin
   HabilitaBotoes;
   StatusBar.Panels[0].Text:=('Mensagens: Alterando Registro.');
-
+  PageControl1.ActivePage:= tsCadastro;
 end;
+
+procedure TfrmBase.btnCancelarClick(Sender: TObject);
+begin
+ PageControl1.ActivePage := tsGrid;
+ btnIncluir.Enabled := True;
+ btnAlterar.Enabled := True;
+ btnExcluir.Enabled := True;
+ btnSalvar.Enabled := False;
+ btnCancelar.Enabled := False;
+ btnFechar.Enabled := True;
+ end;
 
 procedure TfrmBase.btnExcluirClick(Sender: TObject);
 begin
@@ -76,9 +105,6 @@ begin
   btnSalvar.Enabled   := False;
   btnCancelar.Enabled := False;
   btnFechar.Enabled   := False;
-
-  if MessageDlg ('Deseja mesmo excluir o registro?', mtConfirmation,
-  [mbYes, mbNo], 0) = mrYes then
 begin
   btnIncluir.Enabled  := True;
   btnAlterar.Enabled  := True;

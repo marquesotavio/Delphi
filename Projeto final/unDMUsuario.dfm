@@ -1,0 +1,27 @@
+object dmUsuario: TdmUsuario
+  OldCreateOrder = False
+  Height = 394
+  Width = 728
+  object cdsUsuario: TClientDataSet
+    Aggregates = <>
+    Params = <>
+    Left = 48
+    Top = 40
+    object cdsUsuarioCodUsu: TIntegerField
+      FieldName = 'CodUsu'
+    end
+    object cdsUsuarioNomeUsu: TStringField
+      FieldName = 'NomeUsu'
+      Size = 50
+    end
+    object cdsUsuarioSenhaUsu: TStringField
+      FieldName = 'SenhaUsu'
+      Size = 8
+    end
+  end
+  object dsUsuario: TDataSource
+    DataSet = cdsUsuario
+    Left = 120
+    Top = 40
+  end
+end

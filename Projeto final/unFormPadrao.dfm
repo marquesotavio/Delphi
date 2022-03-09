@@ -12,6 +12,7 @@ object frmBase: TfrmBase
   Font.Style = []
   OldCreateOrder = False
   Position = poDesktopCenter
+  OnActivate = FormActivate
   PixelsPerInch = 96
   TextHeight = 13
   object ToolBar1: TToolBar
@@ -62,6 +63,7 @@ object frmBase: TfrmBase
       Caption = 'Salvar'
       Enabled = False
       ImageIndex = 3
+      OnClick = btnSalvarClick
     end
     object btnCancelar: TToolButton
       Left = 204
@@ -69,6 +71,7 @@ object frmBase: TfrmBase
       Caption = 'Cancelar'
       Enabled = False
       ImageIndex = 4
+      OnClick = btnCancelarClick
     end
     object ToolButton7: TToolButton
       Left = 253
@@ -110,31 +113,30 @@ object frmBase: TfrmBase
     TabOrder = 2
     object tsGrid: TTabSheet
       Caption = 'Grid de Consulta'
+      object DBGrid1: TDBGrid
+        Left = 0
+        Top = 0
+        Width = 719
+        Height = 359
+        Align = alClient
+        TabOrder = 0
+        TitleFont.Charset = DEFAULT_CHARSET
+        TitleFont.Color = clWindowText
+        TitleFont.Height = -11
+        TitleFont.Name = 'Tahoma'
+        TitleFont.Style = []
+      end
     end
     object tsCadastro: TTabSheet
       Caption = 'Form de cadastro'
       ImageIndex = 1
     end
   end
-  object DBGrid: TDBGrid
-    Left = 0
-    Top = 55
-    Width = 727
-    Height = 387
-    Align = alClient
-    DataSource = ds
-    TabOrder = 3
-    TitleFont.Charset = DEFAULT_CHARSET
-    TitleFont.Color = clWindowText
-    TitleFont.Height = -11
-    TitleFont.Name = 'Tahoma'
-    TitleFont.Style = []
-  end
   object ImageList1: TImageList
     Height = 32
     Width = 32
-    Left = 672
-    Top = 64
+    Left = 576
+    Top = 16
     Bitmap = {
       494C010106000800040020002000FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
       0000000000003600000028000000800000004000000001002000000000000080
@@ -1198,17 +1200,5 @@ object frmBase: TfrmBase
       FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
       FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF00000000000000000000000000000000
       000000000000}
-  end
-  object ds: TDataSource
-    DataSet = cds
-    Left = 672
-    Top = 120
-  end
-  object cds: TClientDataSet
-    Aggregates = <>
-    Params = <>
-    ProviderName = 'dsp'
-    Left = 672
-    Top = 168
   end
 end

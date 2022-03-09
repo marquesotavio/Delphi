@@ -24,9 +24,9 @@ type
     btSaida: TToolButton;
     mmCadastroClientes: TMenuItem;
     procedure btUsuariosClick(Sender: TObject);
-    procedure btClientesClick(Sender: TObject);
     procedure btChegadaClick(Sender: TObject);
     procedure btSaidaClick(Sender: TObject);
+    procedure btClientesClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -40,24 +40,24 @@ implementation
 
 {$R *.dfm}
 
-uses unCadastroClientes, unUsuario, unChegada, unSaida;
+uses unUsuario, unClientes, unChegada, unSaida;
 
 procedure TFormPrincipal.btUsuariosClick(Sender: TObject);
 begin
- Application.CreateForm(TfrmUsuarios, frmUsuarios);
- frmUsuarios.ShowModal;
-end;
-
-procedure TFormPrincipal.btClientesClick(Sender: TObject);
-begin
- Application.CreateForm(TfrmCadastroClientes, frmCadastroClientes);
- frmCadastroClientes.ShowModal;
+ Application.CreateForm(TfrmUsuario, frmUsuario);
+ frmUsuario.ShowModal;
 end;
 
 procedure TFormPrincipal.btChegadaClick(Sender: TObject);
 begin
  Application.CreateForm(TfrmChegada, frmChegada);
  frmChegada.ShowModal;
+end;
+
+procedure TFormPrincipal.btClientesClick(Sender: TObject);
+begin
+ Application.CreateForm(TfrmCadastroClientes, frmCadastroClientes);
+ frmCadastroClientes.ShowModal;
 end;
 
 procedure TFormPrincipal.btSaidaClick(Sender: TObject);

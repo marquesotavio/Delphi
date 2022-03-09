@@ -92,7 +92,6 @@ object FormPrincipal: TFormPrincipal
       end
       object mmCadastroClientes: TMenuItem
         Caption = 'Cadastro Clientes'
-        OnClick = btClientesClick
       end
     end
     object Sobre1: TMenuItem
