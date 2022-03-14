@@ -12,6 +12,9 @@ type
     cdsUsuarioCodUsu: TIntegerField;
     cdsUsuarioNomeUsu: TStringField;
     cdsUsuarioSenhaUsu: TStringField;
+    cdsUsuarioFunção: TStringField;
+    cdsUsuarioUsuario: TStringField;
+    cdsUsuarioCPF: TStringField;
   private
     { Private declarations }
   public
