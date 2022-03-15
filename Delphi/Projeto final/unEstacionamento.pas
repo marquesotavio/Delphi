@@ -19,14 +19,15 @@ type
     ToolButton1: TToolButton;
     btClientes: TToolButton;
     ToolButton3: TToolButton;
-    btChegada: TToolButton;
+    btEntrada: TToolButton;
     ToolButton5: TToolButton;
     btSaida: TToolButton;
     mmCadastroClientes: TMenuItem;
     procedure btUsuariosClick(Sender: TObject);
-    procedure btChegadaClick(Sender: TObject);
-    procedure btSaidaClick(Sender: TObject);
     procedure btClientesClick(Sender: TObject);
+    procedure btEntradaClick(Sender: TObject);
+    procedure mmCadastroClientesClick(Sender: TObject);
+    procedure btSaidaClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -40,7 +41,7 @@ implementation
 
 {$R *.dfm}
 
-uses unUsuario, unClientes, unChegada, unSaida;
+uses unUsuario, unClientes, unEntrada, unFormPadrao, unDMUsuario, unSaida;
 
 procedure TFormPrincipal.btUsuariosClick(Sender: TObject);
 begin
@@ -48,10 +49,10 @@ begin
  frmUsuario.ShowModal;
 end;
 
-procedure TFormPrincipal.btChegadaClick(Sender: TObject);
+procedure TFormPrincipal.mmCadastroClientesClick(Sender: TObject);
 begin
- Application.CreateForm(TfrmChegada, frmChegada);
- frmChegada.ShowModal;
+ Application.CreateForm(TfrmCadastroClientes, frmCadastroClientes);
+ frmCadastroClientes.ShowModal;
 end;
 
 procedure TFormPrincipal.btClientesClick(Sender: TObject);
@@ -60,12 +61,16 @@ begin
  frmCadastroClientes.ShowModal;
 end;
 
+procedure TFormPrincipal.btEntradaClick(Sender: TObject);
+begin
+ Application.CreateForm(TfrmEntrada, frmEntrada);
+ frmEntrada.ShowModal;
+end;
+
 procedure TFormPrincipal.btSaidaClick(Sender: TObject);
 begin
  Application.CreateForm(TfrmSaida, frmSaida);
  frmSaida.ShowModal;
 end;
-
-
 
 end.

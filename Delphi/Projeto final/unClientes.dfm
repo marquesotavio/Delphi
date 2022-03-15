@@ -14,19 +14,17 @@ inherited frmCadastroClientes: TfrmCadastroClientes
   end
   inherited StatusBar: TStatusBar
     Top = 682
+    ExplicitTop = 682
   end
   inherited PageControl1: TPageControl
-    Top = 83
-    Height = 599
-    Align = alNone
-    ExplicitTop = 83
-    ExplicitHeight = 599
+    Top = 77
+    Height = 605
+    ExplicitTop = 77
+    ExplicitHeight = 605
     inherited tsGrid: TTabSheet
-      ExplicitHeight = 571
+      ExplicitHeight = 577
       inherited DBGrid1: TDBGrid
-        Top = 80
-        Height = 519
-        Align = alNone
+        Height = 577
         DataSource = dmCadastroClientes.dsCadastroClientes
         Columns = <
           item
@@ -59,11 +57,6 @@ inherited frmCadastroClientes: TfrmCadastroClientes
           end
           item
             Expanded = False
-            FieldName = 'NomeCli'
-            Visible = True
-          end
-          item
-            Expanded = False
             FieldName = 'TipoDoc'
             Visible = True
           end
@@ -85,11 +78,12 @@ inherited frmCadastroClientes: TfrmCadastroClientes
       end
     end
     inherited tsCadastro: TTabSheet
-      ExplicitHeight = 571
+      Caption = 'Cadastro'
+      ExplicitHeight = 577
       object Label12: TLabel
         Left = 6
         Top = 5
-        Width = 155
+        Width = 138
         Height = 19
         Caption = 'Dados do Cliente'
         Font.Charset = DEFAULT_CHARSET
@@ -150,9 +144,9 @@ inherited frmCadastroClientes: TfrmCadastroClientes
       object Label4: TLabel
         Left = 6
         Top = 72
-        Width = 38
+        Width = 63
         Height = 13
-        Caption = 'NomeCli'
+        Caption = 'Nome Cliente'
         FocusControl = DBEdit3
       end
       object Label8: TLabel
@@ -238,7 +232,6 @@ inherited frmCadastroClientes: TfrmCadastroClientes
         Width = 134
         Height = 21
         DataField = 'DataPag'
-        DataSource = dmCadastroClientes.dsCadastroClientes
         TabOrder = 5
       end
       object DBEdit3: TDBEdit
@@ -255,7 +248,7 @@ inherited frmCadastroClientes: TfrmCadastroClientes
         Top = 88
         Width = 47
         Height = 21
-        DataField = 'TiipoDoc'
+        DataField = 'TipoDoc'
         DataSource = dmCadastroClientes.dsCadastroClientes
         TabOrder = 7
       end
@@ -272,7 +265,7 @@ inherited frmCadastroClientes: TfrmCadastroClientes
         Left = 6
         Top = 127
         Width = 30
-        Height = 20
+        Height = 21
         DataField = 'Mensalista'
         DataSource = dmCadastroClientes.dsCadastroClientes
         TabOrder = 9
@@ -281,7 +274,7 @@ inherited frmCadastroClientes: TfrmCadastroClientes
         Left = 60
         Top = 127
         Width = 61
-        Height = 20
+        Height = 21
         DataField = 'DataPag'
         DataSource = dmCadastroClientes.dsCadastroClientes
         TabOrder = 10
@@ -293,6 +286,7 @@ inherited frmCadastroClientes: TfrmCadastroClientes
     Top = 55
     Width = 727
     Height = 22
+    ButtonHeight = 21
     Caption = 'ToolBar2'
     TabOrder = 3
     DesignSize = (
@@ -302,19 +296,18 @@ inherited frmCadastroClientes: TfrmCadastroClientes
       Left = 0
       Top = 0
       Width = 75
-      Height = 22
+      Height = 21
       Anchors = [akRight, akBottom]
       BiDiMode = bdRightToLeft
       Caption = 'Pesquisar'
       ParentBiDiMode = False
       TabOrder = 0
-      OnClick = btnPesquisarClick
     end
     object Edit1: TEdit
       Left = 75
       Top = 0
       Width = 649
-      Height = 22
+      Height = 21
       TabOrder = 1
     end
   end

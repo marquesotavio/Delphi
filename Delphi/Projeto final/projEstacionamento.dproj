@@ -112,22 +112,33 @@
             <Form>frmUsuario</Form>
             <FormType>dfm</FormType>
         </DCCReference>
-        <DCCReference Include="unChegada.pas">
-            <Form>frmChegada</Form>
+        <DCCReference Include="unDMUsuario.pas">
+            <Form>dmUsuario</Form>
+            <DesignClass>TDataModule</DesignClass>
+        </DCCReference>
+        <DCCReference Include="unClientes.pas">
+            <Form>frmCadastroClientes</Form>
+        </DCCReference>
+        <DCCReference Include="unEntrada.pas">
+            <Form>frmEntrada</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="unDMEntrada.pas">
+            <Form>dmEntrada</Form>
+            <FormType>dfm</FormType>
+            <DesignClass>TDataModule</DesignClass>
+        </DCCReference>
+        <DCCReference Include="unDMCadastroClientes.pas">
             <FormType>dfm</FormType>
         </DCCReference>
         <DCCReference Include="unSaida.pas">
             <Form>frmSaida</Form>
             <FormType>dfm</FormType>
         </DCCReference>
-        <DCCReference Include="unDMUsuario.pas">
-            <Form>dmUsuario</Form>
+        <DCCReference Include="unDMSaida.pas">
+            <Form>dmSaida</Form>
             <FormType>dfm</FormType>
             <DesignClass>TDataModule</DesignClass>
-        </DCCReference>
-        <DCCReference Include="unClientes.pas">
-            <Form>frmCadastroClientes</Form>
-            <FormType>dfm</FormType>
         </DCCReference>
         <BuildConfiguration Include="Release">
             <Key>Cfg_2</Key>
@@ -150,8 +161,8 @@
                     <Source Name="MainSource">projEstacionamento.dpr</Source>
                 </Source>
                 <Excluded_Packages>
-                    <Excluded_Packages Name="$(BDSBIN)\dcloffice2k260.bpl">Microsoft Office 2000 Sample Automation Server Wrapper Components</Excluded_Packages>
-                    <Excluded_Packages Name="$(BDSBIN)\dclofficexp260.bpl">Microsoft Office XP Sample Automation Server Wrapper Components</Excluded_Packages>
+                    <Excluded_Packages Name="$(BDSBIN)\dcloffice2k270.bpl">Microsoft Office 2000 Sample Automation Server Wrapper Components</Excluded_Packages>
+                    <Excluded_Packages Name="$(BDSBIN)\dclofficexp270.bpl">Microsoft Office XP Sample Automation Server Wrapper Components</Excluded_Packages>
                 </Excluded_Packages>
             </Delphi.Personality>
             <Deployment Version="3">

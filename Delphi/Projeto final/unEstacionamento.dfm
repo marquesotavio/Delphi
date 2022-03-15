@@ -21,7 +21,7 @@ object FormPrincipal: TFormPrincipal
     Width = 715
     Height = 55
     ButtonHeight = 36
-    ButtonWidth = 50
+    ButtonWidth = 48
     Caption = 'ToolBar1'
     Images = ImageList1
     ParentShowHint = False
@@ -36,7 +36,7 @@ object FormPrincipal: TFormPrincipal
       OnClick = btUsuariosClick
     end
     object ToolButton1: TToolButton
-      Left = 50
+      Left = 48
       Top = 0
       Width = 8
       Caption = 'ToolButton1'
@@ -44,29 +44,29 @@ object FormPrincipal: TFormPrincipal
       Style = tbsSeparator
     end
     object btClientes: TToolButton
-      Left = 58
+      Left = 56
       Top = 0
       Caption = 'Clientes'
       ImageIndex = 1
       OnClick = btClientesClick
     end
     object ToolButton3: TToolButton
-      Left = 108
+      Left = 104
       Top = 0
       Width = 8
       Caption = 'ToolButton3'
       ImageIndex = 2
       Style = tbsSeparator
     end
-    object btChegada: TToolButton
-      Left = 116
+    object btEntrada: TToolButton
+      Left = 112
       Top = 0
-      Caption = 'Chegada'
+      Caption = 'Entrada'
       ImageIndex = 2
-      OnClick = btChegadaClick
+      OnClick = btEntradaClick
     end
     object ToolButton5: TToolButton
-      Left = 166
+      Left = 160
       Top = 0
       Width = 8
       Caption = 'ToolButton5'
@@ -74,7 +74,7 @@ object FormPrincipal: TFormPrincipal
       Style = tbsSeparator
     end
     object btSaida: TToolButton
-      Left = 174
+      Left = 168
       Top = 0
       Caption = 'Sa'#237'da'
       ImageIndex = 3
@@ -92,6 +92,7 @@ object FormPrincipal: TFormPrincipal
       end
       object mmCadastroClientes: TMenuItem
         Caption = 'Cadastro Clientes'
+        OnClick = mmCadastroClientesClick
       end
     end
     object Sobre1: TMenuItem

@@ -5,9 +5,36 @@ inherited frmUsuario: TfrmUsuario
   PixelsPerInch = 96
   TextHeight = 13
   inherited PageControl1: TPageControl
+    ActivePage = tsCadastro
     inherited tsGrid: TTabSheet
       inherited DBGrid1: TDBGrid
         DataSource = dmUsuario.dsUsuario
+        Columns = <
+          item
+            Expanded = False
+            FieldName = 'CodUsu'
+            Visible = True
+          end
+          item
+            Expanded = False
+            FieldName = 'Usuario'
+            Visible = True
+          end
+          item
+            Expanded = False
+            FieldName = 'NomeUsu'
+            Visible = True
+          end
+          item
+            Expanded = False
+            FieldName = 'CPF'
+            Visible = True
+          end
+          item
+            Expanded = False
+            FieldName = 'Fun'#231#227'o'
+            Visible = True
+          end>
       end
     end
     inherited tsCadastro: TTabSheet

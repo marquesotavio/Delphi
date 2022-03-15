@@ -1,18 +1,14 @@
 unit unClientes;
-
 interface
-
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, unFormPadrao, Data.DB, System.ImageList,
   Vcl.ImgList, Vcl.Grids, Vcl.DBGrids, Vcl.ComCtrls, Vcl.ToolWin, Datasnap.DBClient, Vcl.StdCtrls,
   Vcl.Mask, Vcl.DBCtrls;
-
 //  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
 //  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, unFormPadrao, Data.DB,, System.ImageList,
 //  Vcl.ImgList, Vcl.ComCtrls, Vcl.ToolWin, Data.DB, Datasnap.DBClient, Vcl.Grids,
 //  Vcl.DBGrids, Vcl.StdCtrls, Vcl.Mask, Vcl.DBCtrls;
-
 type
   TfrmCadastroClientes = class(TfrmBase)
     Label12: TLabel;
@@ -50,11 +46,10 @@ type
     procedure btnAlterarClick(Sender: TObject);
     procedure btnExcluirClick(Sender: TObject);
     procedure btnCancelarClick(Sender: TObject);
-    procedure btnPesquisarClick(Sender: TObject);
+    //procedure btnPesquisarClick(Sender: TObject);
   private
     { Private declarations }
 //    function GetDir:string;
-
   public
     { Public declarations }
   end;
@@ -110,11 +105,11 @@ begin
   PageControl1.ActivePage := tsGrid;
 end;
 
-procedure TfrmCadastroClientes.btnPesquisarClick(Sender: TObject);
-begin
-  inherited;
-  dmCadastroClientes.Locate('Nome Cliente', Edit1.Text[loPartialKey, loCaseInsensitive]);
-end;
+//procedure TfrmCadastroClientes.btnPesquisarClick(Sender: TObject);
+//begin
+//  inherited;
+//  dmCadastroClientes.Locate('Nome Cliente', Edit1.Text[loPartialKey, loCaseInsensitive]);
+//end;
 
 procedure TfrmCadastroClientes.btnCancelarClick(Sender: TObject);
 begin
@@ -142,7 +137,6 @@ begin
     //indice
 //dmCadastroClientes.cdsCadastroClientes.IndexFieldNames:= 'CodCli';
 end;
-
 
 
 
