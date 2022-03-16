@@ -46,6 +46,7 @@ begin
   dmUsuario.cdsUsuario.Edit;
   DBEdit2.SetFocus;
 end;
+
 procedure TfrmUsuario.btnCancelarClick(Sender: TObject);
 begin
   inherited;
@@ -53,6 +54,7 @@ begin
   DBEdit1.Enabled:= True;
   PageControl1.ActivePage := tsGrid;
 end;
+
 procedure TfrmUsuario.btnExcluirClick(Sender: TObject);
 begin
   inherited;

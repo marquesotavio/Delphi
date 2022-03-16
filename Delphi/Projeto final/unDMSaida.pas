@@ -9,7 +9,6 @@ type
   TdmSaida = class(TDataModule)
     cdsSaida: TClientDataSet;
     dsSaida: TDataSource;
-    cdsSaidaPlaca: TStringField;
   private
     { Private declarations }
   public
@@ -22,8 +21,6 @@ var
 implementation
 
 {%CLASSGROUP 'Vcl.Controls.TControl'}
-
-uses unSaida;
 
 {$R *.dfm}
 

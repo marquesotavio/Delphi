@@ -13,6 +13,21 @@ type
     btnPesquisar: TButton;
     Edit1: TEdit;
     ToolBar2: TToolBar;
+    Label7: TLabel;
+    Label1: TLabel;
+    DBEdit1: TDBEdit;
+    Label2: TLabel;
+    DBEdit2: TDBEdit;
+    Label3: TLabel;
+    DBEdit3: TDBEdit;
+    Label4: TLabel;
+    DBEdit4: TDBEdit;
+    Label5: TLabel;
+    DBEdit5: TDBEdit;
+    Label6: TLabel;
+    DBEdit6: TDBEdit;
+    Label8: TLabel;
+    DBEdit7: TDBEdit;
     procedure FormCreate(Sender: TObject);
     procedure btnFecharClick(Sender: TObject);
     procedure FormShow(Sender: TObject);
@@ -21,6 +36,7 @@ type
     procedure btnAlterarClick(Sender: TObject);
     procedure btnExcluirClick(Sender: TObject);
     procedure btnCancelarClick(Sender: TObject);
+    procedure Label7Click(Sender: TObject);
   private
     { Private declarations }
 //    function GetDir:string;
@@ -113,6 +129,12 @@ begin
 end;
 
 
+
+procedure TfrmEntrada.Label7Click(Sender: TObject);
+begin
+  inherited;
+
+end;
 
 //function TfrmCadastroClientes.GetDir: string;
 //begin

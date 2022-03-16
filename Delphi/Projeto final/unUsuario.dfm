@@ -5,7 +5,6 @@ inherited frmUsuario: TfrmUsuario
   PixelsPerInch = 96
   TextHeight = 13
   inherited PageControl1: TPageControl
-    ActivePage = tsCadastro
     inherited tsGrid: TTabSheet
       inherited DBGrid1: TDBGrid
         DataSource = dmUsuario.dsUsuario

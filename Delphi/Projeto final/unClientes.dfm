@@ -19,62 +19,14 @@ inherited frmCadastroClientes: TfrmCadastroClientes
   inherited PageControl1: TPageControl
     Top = 77
     Height = 605
+    ActivePage = tsCadastro
     ExplicitTop = 77
     ExplicitHeight = 605
     inherited tsGrid: TTabSheet
       ExplicitHeight = 577
       inherited DBGrid1: TDBGrid
         Height = 577
-        DataSource = dmCadastroClientes.dsCadastroClientes
-        Columns = <
-          item
-            Expanded = False
-            FieldName = 'CodCli'
-            Title.Caption = 'C'#243'digo Cliente'
-            Visible = True
-          end
-          item
-            Expanded = False
-            FieldName = 'Placa'
-            Visible = True
-          end
-          item
-            Expanded = False
-            FieldName = 'TipoDoc'
-            Title.Caption = 'Nome Cliente'
-            Width = 76
-            Visible = True
-          end
-          item
-            Expanded = False
-            FieldName = 'Marca'
-            Visible = True
-          end
-          item
-            Expanded = False
-            FieldName = 'Modelo'
-            Visible = True
-          end
-          item
-            Expanded = False
-            FieldName = 'TipoDoc'
-            Visible = True
-          end
-          item
-            Expanded = False
-            FieldName = 'NumDoc'
-            Visible = True
-          end
-          item
-            Expanded = False
-            FieldName = 'Mensalista'
-            Visible = True
-          end
-          item
-            Expanded = False
-            FieldName = 'DataPag'
-            Visible = True
-          end>
+        DataSource = dmClientes.dsClientes
       end
     end
     inherited tsCadastro: TTabSheet
@@ -93,46 +45,6 @@ inherited frmCadastroClientes: TfrmCadastroClientes
         Font.Style = [fsBold, fsItalic, fsUnderline]
         ParentFont = False
       end
-      object Label2: TLabel
-        Left = 6
-        Top = 31
-        Width = 30
-        Height = 13
-        Caption = 'CodCli'
-        FocusControl = DBEdit1
-      end
-      object Label3: TLabel
-        Left = 56
-        Top = 30
-        Width = 25
-        Height = 13
-        Caption = 'Placa'
-        FocusControl = DBEdit2
-      end
-      object Label5: TLabel
-        Left = 126
-        Top = 31
-        Width = 53
-        Height = 13
-        Caption = 'TipoVeiculo'
-        FocusControl = DBEdit4
-      end
-      object Label6: TLabel
-        Left = 201
-        Top = 31
-        Width = 29
-        Height = 13
-        Caption = 'Marca'
-        FocusControl = DBEdit5
-      end
-      object Label7: TLabel
-        Left = 279
-        Top = 31
-        Width = 34
-        Height = 13
-        Caption = 'Modelo'
-        FocusControl = DBEdit6
-      end
       object Label22: TLabel
         Left = 456
         Top = 616
@@ -141,90 +53,85 @@ inherited frmCadastroClientes: TfrmCadastroClientes
         Caption = 'DataPag'
         FocusControl = DBEdit20
       end
-      object Label4: TLabel
-        Left = 6
-        Top = 72
-        Width = 63
+      object Label2: TLabel
+        Left = 3
+        Top = 30
+        Width = 30
         Height = 13
-        Caption = 'Nome Cliente'
+        Caption = 'CodCli'
+        FocusControl = DBEdit1
+      end
+      object Label3: TLabel
+        Left = 51
+        Top = 33
+        Width = 25
+        Height = 13
+        Caption = 'Placa'
+        FocusControl = DBEdit2
+      end
+      object Label4: TLabel
+        Left = 119
+        Top = 33
+        Width = 53
+        Height = 13
+        Caption = 'TipoVeiculo'
         FocusControl = DBEdit3
       end
-      object Label8: TLabel
-        Left = 234
-        Top = 72
-        Width = 77
+      object Label5: TLabel
+        Left = 196
+        Top = 33
+        Width = 29
         Height = 13
-        Caption = 'Tipo Documento'
+        Caption = 'Marca'
+        FocusControl = DBEdit4
+      end
+      object Label6: TLabel
+        Left = 279
+        Top = 33
+        Width = 34
+        Height = 13
+        Caption = 'Modelo'
+        FocusControl = DBEdit5
+      end
+      object Label7: TLabel
+        Left = 3
+        Top = 80
+        Width = 60
+        Height = 13
+        Caption = 'NomeCliente'
+        FocusControl = DBEdit6
+      end
+      object Label8: TLabel
+        Left = 196
+        Top = 80
+        Width = 38
+        Height = 13
+        Caption = 'TipoDoc'
         FocusControl = DBEdit7
       end
       object Label9: TLabel
-        Left = 317
-        Top = 72
-        Width = 94
+        Left = 245
+        Top = 80
+        Width = 39
         Height = 13
-        Caption = 'Numero Documento'
+        Caption = 'NumDoc'
         FocusControl = DBEdit8
       end
       object Label10: TLabel
-        Left = 6
-        Top = 111
+        Left = 3
+        Top = 128
         Width = 50
         Height = 13
         Caption = 'Mensalista'
         FocusControl = DBEdit9
       end
       object Label11: TLabel
-        Left = 60
-        Top = 111
-        Width = 80
+        Left = 91
+        Top = 128
+        Width = 41
         Height = 13
-        Caption = 'Data Pagamento'
+        Caption = 'DataPag'
         FocusControl = DBEdit10
-      end
-      object DBEdit1: TDBEdit
-        Left = 6
-        Top = 47
-        Width = 44
-        Height = 21
-        DataField = 'CodCli'
-        DataSource = dmCadastroClientes.dsCadastroClientes
-        TabOrder = 0
-      end
-      object DBEdit2: TDBEdit
-        Left = 56
-        Top = 47
-        Width = 64
-        Height = 21
-        DataField = 'Placa'
-        DataSource = dmCadastroClientes.dsCadastroClientes
-        TabOrder = 1
-      end
-      object DBEdit4: TDBEdit
-        Left = 126
-        Top = 47
-        Width = 69
-        Height = 21
-        DataField = 'TipoVeiculo'
-        DataSource = dmCadastroClientes.dsCadastroClientes
-        TabOrder = 2
-      end
-      object DBEdit5: TDBEdit
-        Left = 201
-        Top = 47
-        Width = 72
-        Height = 21
-        DataField = 'Marca'
-        DataSource = dmCadastroClientes.dsCadastroClientes
-        TabOrder = 3
-      end
-      object DBEdit6: TDBEdit
-        Left = 279
-        Top = 47
-        Width = 74
-        Height = 21
-        DataField = 'Modelo'
-        DataSource = dmCadastroClientes.dsCadastroClientes
-        TabOrder = 4
       end
       object DBEdit20: TDBEdit
         Left = 456
@@ -232,51 +139,96 @@ inherited frmCadastroClientes: TfrmCadastroClientes
         Width = 134
         Height = 21
         DataField = 'DataPag'
-        TabOrder = 5
+        TabOrder = 0
+      end
+      object DBEdit1: TDBEdit
+        Left = 3
+        Top = 49
+        Width = 42
+        Height = 21
+        DataField = 'CodCli'
+        DataSource = dmClientes.dsClientes
+        TabOrder = 1
+      end
+      object DBEdit2: TDBEdit
+        Left = 51
+        Top = 49
+        Width = 62
+        Height = 21
+        DataField = 'Placa'
+        DataSource = dmClientes.dsClientes
+        TabOrder = 2
       end
       object DBEdit3: TDBEdit
-        Left = 6
-        Top = 88
-        Width = 222
+        Left = 119
+        Top = 49
+        Width = 71
         Height = 21
-        DataField = 'NomeCli'
-        DataSource = dmCadastroClientes.dsCadastroClientes
+        DataField = 'TipoVeiculo'
+        DataSource = dmClientes.dsClientes
+        TabOrder = 3
+      end
+      object DBEdit4: TDBEdit
+        Left = 196
+        Top = 49
+        Width = 77
+        Height = 21
+        DataField = 'Marca'
+        DataSource = dmClientes.dsClientes
+        TabOrder = 4
+      end
+      object DBEdit5: TDBEdit
+        Left = 279
+        Top = 49
+        Width = 72
+        Height = 21
+        DataField = 'Modelo'
+        DataSource = dmClientes.dsClientes
+        TabOrder = 5
+      end
+      object DBEdit6: TDBEdit
+        Left = 3
+        Top = 96
+        Width = 187
+        Height = 21
+        DataField = 'NomeCliente'
+        DataSource = dmClientes.dsClientes
         TabOrder = 6
       end
       object DBEdit7: TDBEdit
-        Left = 234
-        Top = 88
-        Width = 47
+        Left = 196
+        Top = 96
+        Width = 43
         Height = 21
         DataField = 'TipoDoc'
-        DataSource = dmCadastroClientes.dsCadastroClientes
+        DataSource = dmClientes.dsClientes
         TabOrder = 7
       end
       object DBEdit8: TDBEdit
-        Left = 317
-        Top = 88
-        Width = 186
+        Left = 245
+        Top = 96
+        Width = 106
         Height = 21
         DataField = 'NumDoc'
-        DataSource = dmCadastroClientes.dsCadastroClientes
+        DataSource = dmClientes.dsClientes
         TabOrder = 8
       end
       object DBEdit9: TDBEdit
-        Left = 6
-        Top = 127
-        Width = 30
+        Left = 3
+        Top = 144
+        Width = 43
         Height = 21
         DataField = 'Mensalista'
-        DataSource = dmCadastroClientes.dsCadastroClientes
+        DataSource = dmClientes.dsClientes
         TabOrder = 9
       end
       object DBEdit10: TDBEdit
-        Left = 60
-        Top = 127
-        Width = 61
+        Left = 91
+        Top = 144
+        Width = 81
         Height = 21
         DataField = 'DataPag'
-        DataSource = dmCadastroClientes.dsCadastroClientes
+        DataSource = dmClientes.dsClientes
         TabOrder = 10
       end
     end

@@ -1,31 +1,42 @@
 object dmEntrada: TdmEntrada
   OldCreateOrder = False
-  Height = 510
-  Width = 715
+  Height = 462
+  Width = 625
   object cdsEntrada: TClientDataSet
     Aggregates = <>
+    FileName = 'cdsEntrada'
     Params = <>
-    Left = 80
-    Top = 64
+    Left = 136
+    Top = 104
+    object cdsEntradaIdEntrada: TIntegerField
+      FieldName = 'IdEntrada'
+    end
     object cdsEntradaPlaca: TStringField
       FieldName = 'Placa'
-      Size = 7
+      Size = 8
     end
     object cdsEntradaTipoVeiculo: TStringField
       FieldName = 'TipoVeiculo'
-      Size = 5
+      Size = 6
     end
     object cdsEntradaMarca: TStringField
       FieldName = 'Marca'
+      Size = 30
     end
     object cdsEntradaModelo: TStringField
       FieldName = 'Modelo'
       Size = 30
     end
+    object cdsEntradaData: TDateField
+      FieldName = 'Data'
+    end
+    object cdsEntradaHora: TTimeField
+      FieldName = 'Hora'
+    end
   end
   object dsEntrada: TDataSource
     DataSet = cdsEntrada
-    Left = 168
-    Top = 64
+    Left = 208
+    Top = 104
   end
 end

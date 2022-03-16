@@ -13,6 +13,9 @@ type
     cdsEntradaTipoVeiculo: TStringField;
     cdsEntradaMarca: TStringField;
     cdsEntradaModelo: TStringField;
+    cdsEntradaData: TDateField;
+    cdsEntradaHora: TTimeField;
+    cdsEntradaIdEntrada: TIntegerField;
   private
     { Private declarations }
   public

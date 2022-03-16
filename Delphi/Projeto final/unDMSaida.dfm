@@ -1,20 +1,16 @@
 object dmSaida: TdmSaida
   OldCreateOrder = False
-  Height = 382
-  Width = 715
+  Height = 443
+  Width = 694
   object cdsSaida: TClientDataSet
     Aggregates = <>
     Params = <>
-    Left = 64
-    Top = 72
-    object cdsSaidaPlaca: TStringField
-      FieldName = 'Placa'
-      Size = 7
-    end
+    Left = 192
+    Top = 168
   end
   object dsSaida: TDataSource
     DataSet = cdsSaida
-    Left = 184
-    Top = 80
+    Left = 296
+    Top = 168
   end
 end
