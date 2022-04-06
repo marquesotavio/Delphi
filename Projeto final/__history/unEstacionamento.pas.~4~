@@ -1,0 +1,65 @@
+unit unEstacionamento;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.ComCtrls, Vcl.ToolWin,
+  System.ImageList, Vcl.ImgList, Vcl.Menus;
+
+type
+  TFormPrincipal = class(TForm)
+    MainMenu1: TMainMenu;
+    Cadastro1: TMenuItem;
+    Sobre1: TMenuItem;
+    ToolBar1: TToolBar;
+    mmCadastroUsuarios: TMenuItem;
+    ImageList1: TImageList;
+    btUsuarios: TToolButton;
+    ToolButton1: TToolButton;
+    btClientes: TToolButton;
+    ToolButton3: TToolButton;
+    btChegada: TToolButton;
+    ToolButton5: TToolButton;
+    btSaida: TToolButton;
+    mmCadastroClientes: TMenuItem;
+    procedure btUsuariosClick(Sender: TObject);
+    procedure btClientesClick(Sender: TObject);
+    procedure btChegadaClick(Sender: TObject);
+    procedure btSaidaClick(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  FormPrincipal: TFormPrincipal;
+
+implementation
+
+{$R *.dfm}
+
+uses unUsuario, unChegada, unSaida;
+
+procedure TFormPrincipal.btUsuariosClick(Sender: TObject);
+begin
+ Application.CreateForm(TfrmUsuarios, frmUsuarios);
+ frmUsuarios.ShowModal;
+end;
+
+procedure TFormPrincipal.btChegadaClick(Sender: TObject);
+begin
+ Application.CreateForm(TfrmChegada, frmChegada);
+ frmChegada.ShowModal;
+end;
+
+procedure TFormPrincipal.btSaidaClick(Sender: TObject);
+begin
+ Application.CreateForm(TfrmSaida, frmSaida);
+ frmSaida.ShowModal;
+end;
+
+
+
+end.

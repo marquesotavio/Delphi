@@ -1,0 +1,51 @@
+unit unClientes;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, unFormPadrao, Data.DB, System.ImageList,
+  Vcl.ImgList, Vcl.Grids, Vcl.DBGrids, Vcl.ComCtrls, Vcl.ToolWin, Vcl.StdCtrls,
+  Vcl.Mask, Vcl.DBCtrls;
+
+type
+  TfrmCadastroClientes = class(TfrmBase)
+    DBEdit2: TDBEdit;
+    DBEdit3: TDBEdit;
+    DBEdit1: TDBEdit;
+    procedure FormCreate(Sender: TObject);
+    procedure btnFecharClick(Sender: TObject);
+    procedure FormShow(Sender: TObject);
+    procedure btnIncluirClick(Sender: TObject);
+    procedure btnSalvarClick(Sender: TObject);
+    procedure btnAlterarClick(Sender: TObject);
+    procedure btnExcluirClick(Sender: TObject);
+    procedure btnCancelarClick(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  frmCadastroClientes: TfrmCadastroClientes;
+
+implementation
+
+{$R *.dfm}
+
+uses unDMCadastroClientes;
+
+procedure TfrmCadastroClientes.FormCreate(Sender: TObject);
+begin
+  inherited;
+  // Criar o datamodule
+  if (not Assigned(dmCadastroClientes)) then
+  dmCadastroClientes:= TdmCadastroClientes.Create(Self);
+
+  // Criar o set
+
+  dmCadastroClientes.cdsCadastroClientes.CreateDataSet;
+end;
+
+end.

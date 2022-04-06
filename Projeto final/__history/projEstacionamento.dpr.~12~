@@ -1,0 +1,19 @@
+program projEstacionamento;
+
+uses
+  Vcl.Forms,
+  unEstacionamento in 'unEstacionamento.pas' {FormPrincipal},
+  unFormPadrao in 'unFormPadrao.pas' {frmBase},
+  unUsuario in 'unUsuario.pas' {frmUsuario},
+  unChegada in 'unChegada.pas' {frmChegada},
+  unSaida in 'unSaida.pas' {frmSaida},
+  unDMUsuario in 'unDMUsuario.pas' {dmUsuario: TDataModule};
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.MainFormOnTaskbar := True;
+  Application.CreateForm(TFormPrincipal, FormPrincipal);
+  Application.Run;
+end.

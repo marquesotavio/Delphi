@@ -1,0 +1,40 @@
+inherited frmCadastroClientes: TfrmCadastroClientes
+  Caption = 'Cadastro Clientes'
+  PixelsPerInch = 96
+  TextHeight = 13
+  inherited PageControl1: TPageControl
+    ActivePage = tsGrid
+    inherited tsGrid: TTabSheet
+      inherited DBGrid1: TDBGrid
+        DataSource = dmCadastroClientes.dsCadastroClientes
+      end
+    end
+  end
+  object DBEdit2: TDBEdit [3]
+    Left = 189
+    Top = 128
+    Width = 121
+    Height = 21
+    DataField = 'NomeCli'
+    DataSource = dmCadastroClientes.dsCadastroClientes
+    TabOrder = 3
+  end
+  object DBEdit3: TDBEdit [4]
+    Left = 376
+    Top = 128
+    Width = 121
+    Height = 21
+    DataField = 'Placa'
+    DataSource = dmCadastroClientes.dsCadastroClientes
+    TabOrder = 4
+  end
+  object DBEdit1: TDBEdit [5]
+    Left = 34
+    Top = 128
+    Width = 121
+    Height = 21
+    DataField = 'CodCli'
+    DataSource = dmCadastroClientes.dsCadastroClientes
+    TabOrder = 5
+  end
+end

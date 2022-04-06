@@ -1,0 +1,58 @@
+unit unDmConexao;
+
+interface
+
+uses
+  System.SysUtils, System.Classes, FireDAC.Stan.Intf, FireDAC.Stan.Option,
+  FireDAC.Stan.Error, FireDAC.UI.Intf, FireDAC.Phys.Intf, FireDAC.Stan.Def,
+  FireDAC.Stan.Pool, FireDAC.Stan.Async, FireDAC.Phys, FireDAC.Phys.FB,
+  FireDAC.Phys.FBDef, FireDAC.VCLUI.Wait, FireDAC.Phys.MySQLDef,
+  FireDAC.Phys.MySQL, FireDAC.Phys.IBBase, FireDAC.Comp.UI, Data.DB,
+  FireDAC.Comp.Client, dialogs;
+
+type
+  TdmConexao = class(TDataModule)
+    FDConnection: TFDConnection;
+    FDGUIxWaitCursor1: TFDGUIxWaitCursor;
+    FBDriverLink: TFDPhysFBDriverLink;
+    MySQLLink: TFDPhysMySQLDriverLink;
+    procedure DataModuleCreate(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  dmConexao: TdmConexao;
+
+implementation
+
+{%CLASSGROUP 'Vcl.Controls.TControl'}
+
+{$R *.dfm}
+
+procedure TdmConexao.DataModuleCreate(Sender: TObject);
+begin
+ //Seta a lib do mysql
+ FbDriverLink.VendorLIb:= 'C:\Windows\System32\FBCLIENT.DLL';
+
+ //Parametros da conexao
+ fdConnection.Params.DriverID := 'fbDriverlink';
+ fdConnection.Params.Add('Server=127.0.0.1');
+ fdConnection.Params.Add('Port=3050');
+ fdConnection.Params.Database := 'C:\projetos-git\Delphi\Pedidos\DbCurso.FDB';
+ fdConnection.Params.UserName := 'SYSDBA';
+ fdConnection.Params.Password := 'masterkey';
+ fdConnection.Params.Add('CharacterSet=ISO8859_2');
+
+ //Tenta conectar com o banco
+try
+   fdConnection.Connected := True;
+ except on E: Exception do
+   ShowMessage(e.Message);
+end;
+
+end;
+
+end.

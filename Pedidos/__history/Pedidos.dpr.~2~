@@ -1,0 +1,14 @@
+program Pedidos;
+
+uses
+  Vcl.Forms,
+  unPedidos in 'unPedidos.pas' {frmControlePedidos};
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.MainFormOnTaskbar := True;
+  Application.CreateForm(TfrmControlePedidos, frmControlePedidos);
+  Application.Run;
+end.

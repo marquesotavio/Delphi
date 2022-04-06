@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2022/04/06 10:42:29.000.488,=C:\Users\otavio.marques\Documents\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
+    <Transaction>2022/04/06 10:43:02.000.695,C:\Users\otavio.marques\Documents\Embarcadero\Studio\Projects\Unit2.dfm=C:\projetos-git\Delphi\Pedidos\unPedidos.dfm</Transaction>
+    <Transaction>2022/04/06 10:43:02.000.695,C:\Users\otavio.marques\Documents\Embarcadero\Studio\Projects\Unit2.pas=C:\projetos-git\Delphi\Pedidos\unPedidos.pas</Transaction>
+    <Transaction>2022/04/06 10:43:06.000.418,C:\Users\otavio.marques\Documents\Embarcadero\Studio\Projects\Project2.dproj=C:\projetos-git\Delphi\Pedidos\Pedidos.dproj</Transaction>
+    <Transaction>2022/04/06 10:45:56.105,=C:\projetos-git\Delphi\Pedidos\Unit1.pas</Transaction>
+    <Transaction>2022/04/06 10:46:37.305,C:\projetos-git\Delphi\Pedidos\unDmConexao.pas=C:\projetos-git\Delphi\Pedidos\Unit1.pas</Transaction>
+    <Transaction>2022/04/06 10:46:37.305,C:\projetos-git\Delphi\Pedidos\unDmConexao.dfm=C:\projetos-git\Delphi\Pedidos\Unit1.dfm</Transaction>
+  </Transactions>
+</BorlandProject>
