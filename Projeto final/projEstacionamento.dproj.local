@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2022/03/09 08:14:37.000.199,=C:\projetos-git\Delphi\Projeto final\Unit1.pas</Transaction>
+    <Transaction>2022/03/09 08:15:33.000.839,C:\projetos-git\Delphi\Projeto final\unDM.dfm=C:\projetos-git\Delphi\Projeto final\Unit1.dfm</Transaction>
+    <Transaction>2022/03/09 08:15:33.000.839,C:\projetos-git\Delphi\Projeto final\unDM.pas=C:\projetos-git\Delphi\Projeto final\Unit1.pas</Transaction>
+    <Transaction>2022/03/09 08:16:14.000.123,C:\projetos-git\Delphi\Projeto final\unDMUsuario.pas=C:\projetos-git\Delphi\Projeto final\unDM.pas</Transaction>
+    <Transaction>2022/03/09 08:16:14.000.123,C:\projetos-git\Delphi\Projeto final\unDMUsuario.dfm=C:\projetos-git\Delphi\Projeto final\unDM.dfm</Transaction>
+    <Transaction>2022/03/09 08:42:43.000.908,=C:\projetos-git\Delphi\Projeto final\Unit1.pas</Transaction>
+    <Transaction>2022/03/09 08:50:40.000.628,C:\projetos-git\Delphi\Projeto final\unCadastroClientes.dfm=C:\projetos-git\Delphi\Projeto final\Unit1.dfm</Transaction>
+    <Transaction>2022/03/09 08:50:40.000.628,C:\projetos-git\Delphi\Projeto final\unCadastroClientes.pas=C:\projetos-git\Delphi\Projeto final\Unit1.pas</Transaction>
+    <Transaction>2022/03/09 08:59:11.000.551,C:\projetos-git\Delphi\Projeto final\unCadastroClientes.pas=</Transaction>
+    <Transaction>2022/03/09 10:33:38.000.225,=C:\projetos-git\Delphi\Projeto final\Unit1.pas</Transaction>
+    <Transaction>2022/03/09 10:33:48.000.652,C:\projetos-git\Delphi\Projeto final\Unit1.pas=C:\projetos-git\Delphi\Projeto final\unClientes.pas</Transaction>
+    <Transaction>2022/03/09 10:33:48.000.652,C:\projetos-git\Delphi\Projeto final\Unit1.dfm=C:\projetos-git\Delphi\Projeto final\unClientes.dfm</Transaction>
+    <Transaction>2022/03/09 10:34:22.000.364,=C:\projetos-git\Delphi\Projeto final\Unit1.pas</Transaction>
+    <Transaction>2022/03/09 10:34:40.000.135,C:\projetos-git\Delphi\Projeto final\Unit1.pas=C:\projetos-git\Delphi\Projeto final\unDMClientes.pas</Transaction>
+    <Transaction>2022/03/09 10:34:40.000.135,C:\projetos-git\Delphi\Projeto final\Unit1.dfm=C:\projetos-git\Delphi\Projeto final\unDMClientes.dfm</Transaction>
+    <Transaction>2022/03/09 10:36:02.000.886,=C:\projetos-git\Delphi\Projeto final\Unit1.pas</Transaction>
+    <Transaction>2022/03/09 10:37:35.000.035,C:\projetos-git\Delphi\Projeto final\Unit1.dfm=C:\projetos-git\Delphi\Projeto final\unDMCadastroClientes.dfm</Transaction>
+    <Transaction>2022/03/09 10:37:35.000.035,C:\projetos-git\Delphi\Projeto final\Unit1.pas=C:\projetos-git\Delphi\Projeto final\unDMCadastroClientes.pas</Transaction>
+  </Transactions>
+</BorlandProject>

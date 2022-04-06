@@ -1,0 +1,72 @@
+unit unUsuario;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, unFormPadrao, System.ImageList,
+  Vcl.ImgList, Vcl.ComCtrls, Vcl.ToolWin, Data.DB, Datasnap.DBClient, Vcl.Grids,
+  Vcl.DBGrids, Vcl.StdCtrls, Vcl.Mask, Vcl.DBCtrls;
+
+type
+  TfrmUsuario = class(TfrmBase)
+    DBEdit1: TDBEdit;
+    DBEdit2: TDBEdit;
+    DBEdit3: TDBEdit;
+    procedure FormCreate(Sender: TObject);
+    procedure btnFecharClick(Sender: TObject);
+    procedure FormShow(Sender: TObject);
+    procedure btnIncluirClick(Sender: TObject);
+    procedure btnSalvarClick(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  frmUsuario: TfrmUsuario;
+
+implementation
+
+{$R *.dfm}
+
+uses unDMUsuario;
+
+procedure TfrmUsuario.btnFecharClick(Sender: TObject);
+begin
+  inherited;
+  FreeAndNil(dmUsuario);
+end;
+
+procedure TfrmUsuario.btnIncluirClick(Sender: TObject);
+begin
+  inherited;
+  dmUsuario.cdsUsuario.Insert;
+end;
+
+procedure TfrmUsuario.btnSalvarClick(Sender: TObject);
+begin
+  inherited;
+  dmUsuario.cdsUsuario.Post;
+end;
+
+procedure TfrmUsuario.FormCreate(Sender: TObject);
+begin
+  inherited;
+  // Criar o datamodule
+  if (not Assigned(dmUsuario)) then
+  dmUsuario:= TdmUsuario.Create(Self);
+
+  // Criar o set
+
+  dmUsuario.cdsUsuario.CreateDataSet;
+end;
+
+procedure TfrmUsuario.FormShow(Sender: TObject);
+begin
+  inherited;
+  dmUsuario.cdsUsuario.Open;
+end;
+
+end.
