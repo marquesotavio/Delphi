@@ -145,8 +145,8 @@ object frmControlePedidos: TfrmControlePedidos
     end
   end
   object ImageList1: TImageList
-    Left = 280
-    Top = 184
+    Left = 296
+    Top = 128
     Bitmap = {
       494C010106000800040010001000FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
       0000000000003600000028000000400000002000000001002000000000000020
