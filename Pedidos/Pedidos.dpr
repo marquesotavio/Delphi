@@ -3,7 +3,10 @@ program Pedidos;
 uses
   Vcl.Forms,
   unPedidos in 'unPedidos.pas' {frmControlePedidos},
-  unDmConexao in 'unDmConexao.pas' {dmConexao: TDataModule};
+  unDmConexao in 'unDmConexao.pas' {dmConexao: TDataModule},
+  unMainPadrao in 'unMainPadrao.pas' {frmMainPadrao},
+  unCep in 'unCep.pas' {frmCep},
+  unDmCep in 'unDmCep.pas' {dmCep: TDataModule};
 
 {$R *.res}
 

@@ -17,7 +17,7 @@ type
     FBDriverLink: TFDPhysFBDriverLink;
     MySQLLink: TFDPhysMySQLDriverLink;
     procedure DataModuleCreate(Sender: TObject);
-  private
+    private
     { Private declarations }
   public
     { Public declarations }

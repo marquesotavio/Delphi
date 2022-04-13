@@ -2,11 +2,20 @@
 <BorlandProject>
 	<Transactions>
     <Transaction>2022/04/06 10:42:29.000.488,=C:\Users\otavio.marques\Documents\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
-    <Transaction>2022/04/06 10:43:02.000.695,C:\projetos-git\Delphi\Pedidos\unPedidos.dfm=C:\Users\otavio.marques\Documents\Embarcadero\Studio\Projects\Unit2.dfm</Transaction>
     <Transaction>2022/04/06 10:43:02.000.695,C:\projetos-git\Delphi\Pedidos\unPedidos.pas=C:\Users\otavio.marques\Documents\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
+    <Transaction>2022/04/06 10:43:02.000.695,C:\projetos-git\Delphi\Pedidos\unPedidos.dfm=C:\Users\otavio.marques\Documents\Embarcadero\Studio\Projects\Unit2.dfm</Transaction>
     <Transaction>2022/04/06 10:43:06.000.418,C:\projetos-git\Delphi\Pedidos\Pedidos.dproj=C:\Users\otavio.marques\Documents\Embarcadero\Studio\Projects\Project2.dproj</Transaction>
     <Transaction>2022/04/06 10:45:56.000.105,=C:\projetos-git\Delphi\Pedidos\Unit1.pas</Transaction>
     <Transaction>2022/04/06 10:46:37.000.305,C:\projetos-git\Delphi\Pedidos\Unit1.dfm=C:\projetos-git\Delphi\Pedidos\unDmConexao.dfm</Transaction>
     <Transaction>2022/04/06 10:46:37.000.305,C:\projetos-git\Delphi\Pedidos\Unit1.pas=C:\projetos-git\Delphi\Pedidos\unDmConexao.pas</Transaction>
+    <Transaction>2022/04/13 08:46:16.000.234,=C:\projetos-git\Delphi\Pedidos\Unit1.pas</Transaction>
+    <Transaction>2022/04/13 08:50:19.000.937,C:\projetos-git\Delphi\Pedidos\Unit1.dfm=C:\projetos-git\Delphi\Pedidos\unMainPadrao.dfm</Transaction>
+    <Transaction>2022/04/13 08:50:19.000.937,C:\projetos-git\Delphi\Pedidos\Unit1.pas=C:\projetos-git\Delphi\Pedidos\unMainPadrao.pas</Transaction>
+    <Transaction>2022/04/13 10:32:20.744,=C:\projetos-git\Delphi\Pedidos\Unit1.pas</Transaction>
+    <Transaction>2022/04/13 10:32:47.466,C:\projetos-git\Delphi\Pedidos\unCep.pas=C:\projetos-git\Delphi\Pedidos\Unit1.pas</Transaction>
+    <Transaction>2022/04/13 10:32:47.466,C:\projetos-git\Delphi\Pedidos\unCep.dfm=C:\projetos-git\Delphi\Pedidos\Unit1.dfm</Transaction>
+    <Transaction>2022/04/13 10:48:38.939,=C:\projetos-git\Delphi\Pedidos\Unit1.pas</Transaction>
+    <Transaction>2022/04/13 10:49:48.105,C:\projetos-git\Delphi\Pedidos\unDmCep.pas=C:\projetos-git\Delphi\Pedidos\Unit1.pas</Transaction>
+    <Transaction>2022/04/13 10:49:48.105,C:\projetos-git\Delphi\Pedidos\unDmCep.dfm=C:\projetos-git\Delphi\Pedidos\Unit1.dfm</Transaction>
   </Transactions>
 </BorlandProject>

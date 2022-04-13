@@ -1,0 +1,20 @@
+program Pedidos;
+
+uses
+  Vcl.Forms,
+  unPedidos in 'unPedidos.pas' {frmControlePedidos},
+  unDmConexao in 'unDmConexao.pas' {dmConexao: TDataModule},
+  unMainPadrao in 'unMainPadrao.pas' {frmMainPadrao},
+  unCep in 'unCep.pas' {frmCep},
+  unDmCep in 'unDmCep.pas' {DataModule1: TDataModule};
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.MainFormOnTaskbar := True;
+  Application.CreateForm(TdmConexao, dmConexao);
+  Application.CreateForm(TfrmControlePedidos, frmControlePedidos);
+  Application.CreateForm(TDataModule1, DataModule1);
+  Application.Run;
+end.

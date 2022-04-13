@@ -1,0 +1,47 @@
+unit unDmCep;
+
+interface
+
+uses
+  System.SysUtils, System.Classes, FireDAC.Stan.Intf, FireDAC.Stan.Option,
+  FireDAC.Stan.Param, FireDAC.Stan.Error, FireDAC.DatS, FireDAC.Phys.Intf,
+  FireDAC.DApt.Intf, FireDAC.Stan.Async, FireDAC.DApt, Data.DB,
+  FireDAC.Comp.DataSet, FireDAC.Comp.Client, Datasnap.DBClient,
+  Datasnap.Provider;
+
+type
+  TDataModule1 = class(TDataModule)
+    qrCep: TFDQuery;
+    dspCep: TDataSetProvider;
+    cdsCep: TClientDataSet;
+    procedure DataModuleCreate(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  DataModule1: TDataModule1;
+
+implementation
+
+{%CLASSGROUP 'Vcl.Controls.TControl'}
+
+uses unDmConexao;
+
+{$R *.dfm}
+
+procedure TDataModule1.DataModuleCreate(Sender: TObject);
+begin
+ //Comando sql de abertura de tabela
+ qrCep.SQL.Clear;
+ qrCep.SQL.Add('SELECT * FROM CEP');
+
+ //Ligação dos componentes
+ qrCep.Connection:= dmConexao.fdConnection;
+ dspCep.DataSet:= qrCep;
+ cdsCep.ProviderName:= 'dspCep';
+end;
+
+end.

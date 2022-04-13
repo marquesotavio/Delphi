@@ -1,0 +1,14 @@
+inherited frmCep: TfrmCep
+  Caption = 'Cadastro de Cep'
+  PixelsPerInch = 96
+  TextHeight = 13
+  inherited ActionList1: TActionList
+    inherited actSalvar: TAction
+      Caption = 'Salvar'
+    end
+  end
+  inherited dsCadastro: TDataSource
+    Left = 632
+    Top = 280
+  end
+end

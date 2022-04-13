@@ -42,7 +42,8 @@ type
     ToolButton11: TToolButton;
     Panel1: TPanel;
     procedure actSairExecute(Sender: TObject);
-  private
+    procedure actCepExecute(Sender: TObject);
+    private
     { Private declarations }
   public
     { Public declarations }
@@ -54,6 +55,15 @@ var
 implementation
 
 {$R *.dfm}
+
+uses unCep;
+
+
+procedure TfrmControlePedidos.actCepExecute(Sender: TObject);
+begin
+ Application.CreateForm(TfrmCep, frmCep);
+ frmCep.ShowModal;
+end;
 
 procedure TfrmControlePedidos.actSairExecute(Sender: TObject);
 begin

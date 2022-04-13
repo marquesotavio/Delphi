@@ -1,0 +1,9 @@
+object DataModule1: TDataModule1
+  OldCreateOrder = False
+  Height = 376
+  Width = 709
+  object FDQuery: TFDQuery
+    Left = 48
+    Top = 56
+  end
+end

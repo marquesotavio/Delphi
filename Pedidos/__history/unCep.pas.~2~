@@ -1,0 +1,26 @@
+unit unCep;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, unMainPadrao, Data.DB, System.Actions,
+  Vcl.ActnList, System.ImageList, Vcl.ImgList, Vcl.Grids, Vcl.DBGrids,
+  Vcl.ComCtrls, Vcl.ExtCtrls, Vcl.ToolWin;
+
+type
+  TfrmCep = class(TfrmMainPadrao)
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  frmCep: TfrmCep;
+
+implementation
+
+{$R *.dfm}
+
+end.

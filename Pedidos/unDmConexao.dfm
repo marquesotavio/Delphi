@@ -5,7 +5,14 @@ object dmConexao: TdmConexao
   Width = 542
   object FDConnection: TFDConnection
     Params.Strings = (
+      'Database=C:\projetos-git\Delphi\Pedidos\DbCurso.FDB'
+      'User_Name=SYSDBA'
+      'Password=masterkey'
+      'Server=127.0.0.1'
+      'Port=3050'
+      'CharacterSet=ISO8859_2'
       'DriverID=FBDriverLink')
+    Connected = True
     Left = 40
     Top = 24
   end
@@ -20,7 +27,7 @@ object dmConexao: TdmConexao
     Top = 24
   end
   object MySQLLink: TFDPhysMySQLDriverLink
-    Left = 248
-    Top = 104
+    Left = 328
+    Top = 24
   end
 end

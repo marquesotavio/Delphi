@@ -3,7 +3,7 @@ object frmControlePedidos: TfrmControlePedidos
   Top = 0
   Caption = 'Sistema de Controle de e Pedidos'
   ClientHeight = 435
-  ClientWidth = 793
+  ClientWidth = 875
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -16,10 +16,11 @@ object frmControlePedidos: TfrmControlePedidos
   PixelsPerInch = 96
   TextHeight = 13
   object ToolBar1: TToolBar
-    Left = 0
-    Top = 0
-    Width = 793
-    Height = 41
+    AlignWithMargins = True
+    Left = 3
+    Top = 3
+    Width = 869
+    Height = 35
     ButtonHeight = 36
     ButtonWidth = 120
     Caption = 'ToolBar1'
@@ -28,6 +29,8 @@ object frmControlePedidos: TfrmControlePedidos
     ShowCaptions = True
     ShowHint = True
     TabOrder = 0
+    ExplicitLeft = -2
+    ExplicitTop = 0
     object ToolButton1: TToolButton
       Left = 0
       Top = 0
@@ -64,7 +67,7 @@ object frmControlePedidos: TfrmControlePedidos
       Top = 0
       Width = 8
       Caption = 'ToolButton6'
-      ImageIndex = 6
+      ImageIndex = 3
       Style = tbsSeparator
     end
     object ToolButton7: TToolButton
@@ -99,9 +102,20 @@ object frmControlePedidos: TfrmControlePedidos
       Action = actSair
     end
   end
+  object Panel1: TPanel
+    Left = 0
+    Top = 41
+    Width = 875
+    Height = 8
+    Align = alTop
+    Color = clRed
+    ParentBackground = False
+    TabOrder = 1
+    ExplicitTop = 40
+  end
   object MainMenu1: TMainMenu
-    Left = 136
-    Top = 144
+    Left = 128
+    Top = 104
     object Cadastro1: TMenuItem
       Caption = 'Cadastros'
       object CadastroClientes1: TMenuItem
@@ -132,7 +146,7 @@ object frmControlePedidos: TfrmControlePedidos
   end
   object ImageList1: TImageList
     Left = 296
-    Top = 144
+    Top = 128
     Bitmap = {
       494C010106000800040010001000FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
       0000000000003600000028000000400000002000000001002000000000000020
@@ -407,7 +421,7 @@ object frmControlePedidos: TfrmControlePedidos
   end
   object ActionList1: TActionList
     Images = ImageList1
-    Left = 424
+    Left = 472
     Top = 136
     object actCep: TAction
       Caption = 'Cadastro de CEP'#180's'
