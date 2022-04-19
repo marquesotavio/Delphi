@@ -62,6 +62,7 @@ object frmMainPadrao: TfrmMainPadrao
       Left = 204
       Top = 0
       Action = actSalvar
+      Caption = 'Salvar'
     end
     object ToolButton7: TToolButton
       Left = 253
@@ -129,7 +130,7 @@ object frmMainPadrao: TfrmMainPadrao
     end
   end
   object ImageList1: TImageList
-    Left = 624
+    Left = 592
     Top = 88
     Bitmap = {
       494C010106000800040010001000FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
@@ -405,8 +406,8 @@ object frmMainPadrao: TfrmMainPadrao
   end
   object ActionList1: TActionList
     Images = ImageList1
-    Left = 584
-    Top = 192
+    Left = 592
+    Top = 152
     object actIncluir: TAction
       Caption = 'Incluir'
       ImageIndex = 0
@@ -439,7 +440,7 @@ object frmMainPadrao: TfrmMainPadrao
     end
   end
   object dsCadastro: TDataSource
-    Left = 456
-    Top = 208
+    Left = 592
+    Top = 216
   end
 end

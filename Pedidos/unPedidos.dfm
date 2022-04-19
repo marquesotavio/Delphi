@@ -111,8 +111,8 @@ object frmControlePedidos: TfrmControlePedidos
     TabOrder = 1
   end
   object MainMenu1: TMainMenu
-    Left = 128
-    Top = 104
+    Left = 24
+    Top = 64
     object Cadastro1: TMenuItem
       Caption = 'Cadastros'
       object CadastroClientes1: TMenuItem
@@ -142,8 +142,8 @@ object frmControlePedidos: TfrmControlePedidos
     end
   end
   object ImageList1: TImageList
-    Left = 296
-    Top = 128
+    Left = 88
+    Top = 64
     Bitmap = {
       494C010106000800040010001000FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
       0000000000003600000028000000400000002000000001002000000000000020
@@ -418,8 +418,8 @@ object frmControlePedidos: TfrmControlePedidos
   end
   object ActionList1: TActionList
     Images = ImageList1
-    Left = 472
-    Top = 136
+    Left = 152
+    Top = 72
     object actCep: TAction
       Caption = 'Cadastro de CEP'#180's'
       ImageIndex = 0
@@ -428,10 +428,12 @@ object frmControlePedidos: TfrmControlePedidos
     object actClientes: TAction
       Caption = 'Cadastro de Clientes'
       ImageIndex = 1
+      OnExecute = actClientesExecute
     end
     object actFornecedores: TAction
       Caption = 'Cadastro Fornecedores'
       ImageIndex = 2
+      OnExecute = actFornecedoresExecute
     end
     object actPedidoCompra: TAction
       Caption = 'Pedido de Compra'

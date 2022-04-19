@@ -14,7 +14,7 @@ type
     procedure FormCreate(Sender: TObject);
     procedure FormDestroy(Sender: TObject);
     procedure FormShow(Sender: TObject);
-  private
+    private
     { Private declarations }
   public
     { Public declarations }
@@ -35,7 +35,6 @@ begin
   //criando o datamodule de CEP para uso
   if not Assigned(dmCep) then
   dmCep:= TdmCep.Create(nil);
-
   dsCadastro.DataSet:= dmCep.cdsCep;
 end;
 

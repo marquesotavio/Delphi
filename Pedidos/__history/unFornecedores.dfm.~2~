@@ -1,0 +1,9 @@
+inherited frmFornecedores: TfrmFornecedores
+  Caption = 'Cadastro de Fornecedores'
+  ExplicitTop = -47
+  PixelsPerInch = 96
+  TextHeight = 13
+  inherited dsCadastro: TDataSource
+    DataSet = dmFornecedores.cdsFornecedores
+  end
+end

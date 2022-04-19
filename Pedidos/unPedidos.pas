@@ -43,6 +43,8 @@ type
     Panel1: TPanel;
     procedure actSairExecute(Sender: TObject);
     procedure actCepExecute(Sender: TObject);
+    procedure actClientesExecute(Sender: TObject);
+    procedure actFornecedoresExecute(Sender: TObject);
     private
     { Private declarations }
   public
@@ -56,13 +58,25 @@ implementation
 
 {$R *.dfm}
 
-uses unCep;
+uses unCep, unCadastroClientes, unFornecedores;
 
 
 procedure TfrmControlePedidos.actCepExecute(Sender: TObject);
 begin
  Application.CreateForm(TfrmCep, frmCep);
  frmCep.ShowModal;
+end;
+
+procedure TfrmControlePedidos.actClientesExecute(Sender: TObject);
+begin
+  Application.CreateForm(TfrmCadastroClientes, frmCadastroClientes);
+  frmCadastroClientes.ShowModal;
+end;
+
+procedure TfrmControlePedidos.actFornecedoresExecute(Sender: TObject);
+begin
+ Application.CreateForm(TfrmFornecedores, frmFornecedores);
+ frmFornecedores.ShowModal;
 end;
 
 procedure TfrmControlePedidos.actSairExecute(Sender: TObject);

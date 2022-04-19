@@ -5,7 +5,9 @@ object dmConexao: TdmConexao
   Width = 542
   object FDConnection: TFDConnection
     Params.Strings = (
-      'Database=C:\projetos-git\Delphi\Pedidos\DbCurso.FDB'
+      
+        'Database=Z:\projetos-git\delphi\projeto-controle-pedidos\Delphi\' +
+        'Pedidos\DbCurso.FDB'
       'User_Name=SYSDBA'
       'Password=masterkey'
       'Server=127.0.0.1'
