@@ -12,7 +12,6 @@ object dmConexao: TdmConexao
       'Port=3050'
       'CharacterSet=ISO8859_2'
       'DriverID=FBDriverLink')
-    Connected = True
     Left = 40
     Top = 24
   end
