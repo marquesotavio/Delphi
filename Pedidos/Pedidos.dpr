@@ -10,7 +10,9 @@ uses
   unCadastroClientes in 'unCadastroClientes.pas' {frmCadastroClientes},
   unDmClientes in 'unDmClientes.pas' {dmClientes: TDataModule},
   unFornecedores in 'unFornecedores.pas' {frmFornecedores},
-  unDmFornecedores in 'unDmFornecedores.pas' {dmFornecedores: TDataModule};
+  unDmFornecedores in 'unDmFornecedores.pas' {dmFornecedores: TDataModule},
+  Vcl.Themes,
+  Vcl.Styles;
 
 {$R *.res}
 

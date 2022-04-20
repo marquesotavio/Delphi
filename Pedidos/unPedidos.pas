@@ -6,7 +6,7 @@ uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, System.Actions, Vcl.ActnList, Vcl.Menus,
   System.ImageList, Vcl.ImgList, Vcl.ToolWin, Vcl.ActnMan, Vcl.ActnCtrls,
-  Vcl.ComCtrls, Vcl.ExtCtrls;
+  Vcl.ComCtrls, Vcl.ExtCtrls, Vcl.Imaging.jpeg;
 
 type
   TfrmControlePedidos = class(TForm)
@@ -41,6 +41,7 @@ type
     ToolButton10: TToolButton;
     ToolButton11: TToolButton;
     Panel1: TPanel;
+    Image1: TImage;
     procedure actSairExecute(Sender: TObject);
     procedure actCepExecute(Sender: TObject);
     procedure actClientesExecute(Sender: TObject);
