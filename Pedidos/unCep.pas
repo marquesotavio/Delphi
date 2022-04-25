@@ -14,6 +14,7 @@ type
     procedure FormCreate(Sender: TObject);
     procedure FormDestroy(Sender: TObject);
     procedure FormShow(Sender: TObject);
+    procedure FormKeyPress(Sender: TObject; var Key: Char);
     private
     { Private declarations }
   public
@@ -36,6 +37,13 @@ begin
   if not Assigned(dmCep) then
   dmCep:= TdmCep.Create(nil);
   dsCadastro.DataSet:= dmCep.cdsCep;
+end;
+
+procedure TfrmCep.FormKeyPress(Sender: TObject; var Key: Char);
+begin
+  inherited;
+  if (Key = #27) and (Assigned(dmCep)) then
+  Close;
 end;
 
 procedure TfrmCep.FormDestroy(Sender: TObject);

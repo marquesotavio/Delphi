@@ -14,7 +14,8 @@ type
     procedure FormCreate(Sender: TObject);
     procedure FormDestroy(Sender: TObject);
     procedure FormShow(Sender: TObject);
-  private
+    procedure FormKeyPress(Sender: TObject; var Key: Char);
+    private
     { Private declarations }
   public
     { Public declarations }
@@ -42,6 +43,12 @@ begin
  dsCadastro.DataSet:= dmClientes.cdsClientes;
 end;
 
+procedure TfrmCadastroClientes.FormKeyPress(Sender: TObject; var Key: Char);
+begin
+  inherited;
+  if (Key = #27) and (Assigned(dmClientes)) then
+  Close;
+end;
 
 procedure TfrmCadastroClientes.FormDestroy(Sender: TObject);
 begin
@@ -57,6 +64,7 @@ begin
  inherited;
  dmClientes.cdsClientes.Open;
 end;
+
 
 end.
 

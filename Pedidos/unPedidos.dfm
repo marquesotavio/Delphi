@@ -13,6 +13,8 @@ object frmControlePedidos: TfrmControlePedidos
   Menu = MainMenu1
   OldCreateOrder = False
   WindowState = wsMaximized
+  OnCloseQuery = FormCloseQuery
+  OnKeyPress = FormKeyPress
   PixelsPerInch = 96
   TextHeight = 13
   object Image1: TImage

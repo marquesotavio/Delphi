@@ -16,9 +16,6 @@ inherited frmFornecedores: TfrmFornecedores
         VisibleButtons = [nbFirst, nbPrior, nbNext, nbLast, nbRefresh]
         Align = alBottom
         TabOrder = 1
-        ExplicitLeft = 80
-        ExplicitTop = 264
-        ExplicitWidth = 240
       end
     end
   end

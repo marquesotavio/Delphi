@@ -46,6 +46,8 @@ type
     procedure actCepExecute(Sender: TObject);
     procedure actClientesExecute(Sender: TObject);
     procedure actFornecedoresExecute(Sender: TObject);
+    procedure FormCloseQuery(Sender: TObject; var CanClose: Boolean);
+    procedure FormKeyPress(Sender: TObject; var Key: Char);
     private
     { Private declarations }
   public
@@ -82,6 +84,19 @@ end;
 
 procedure TfrmControlePedidos.actSairExecute(Sender: TObject);
 begin
+ Close;
+end;
+
+procedure TfrmControlePedidos.FormCloseQuery(Sender: TObject;
+  var CanClose: Boolean);
+begin
+ canClose := Application.MessageBox('Tem certeza que deseja sair?', 'Atenção!', MB_YESNO+MB_ICONQUESTION) = idYES;
+end;
+
+procedure TfrmControlePedidos.FormKeyPress(Sender: TObject;
+ var Key: Char);
+begin
+ if Key = #27 then
  Close;
 end;
 

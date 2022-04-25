@@ -14,6 +14,7 @@ type
   procedure FormCreate (Sender: TObject);
   procedure FormDestroy (Sender: TObject);
   procedure FormShow (Sender: TObject);
+    procedure FormKeyPress(Sender: TObject; var Key: Char);
   private
     { Private declarations }
   public
@@ -38,6 +39,13 @@ begin
   if not Assigned(dmFornecedores) then
   dmFornecedores:= TdmFornecedores.Create(nil);
   dsCadastro.DataSet:= dmFornecedores.cdsFornecedores;
+end;
+
+procedure TfrmFornecedores.FormKeyPress(Sender: TObject; var Key: Char);
+begin
+  inherited;
+  if (Key = #27) and (Assigned(dmFornecedores)) then
+  Close;
 end;
 
 procedure TfrmFornecedores.FormDestroy(Sender: TObject);
