@@ -17,21 +17,25 @@ inherited frmUsuario: TfrmUsuario
           item
             Expanded = False
             FieldName = 'Usuario'
+            Width = 64
             Visible = True
           end
           item
             Expanded = False
             FieldName = 'NomeUsu'
+            Width = 64
             Visible = True
           end
           item
             Expanded = False
             FieldName = 'CPF'
+            Width = 64
             Visible = True
           end
           item
             Expanded = False
             FieldName = 'Fun'#231#227'o'
+            Width = 64
             Visible = True
           end>
       end
