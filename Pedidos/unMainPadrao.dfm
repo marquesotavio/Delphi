@@ -107,6 +107,7 @@ object frmMainPadrao: TfrmMainPadrao
     ActivePage = TabSheet1
     Align = alClient
     TabOrder = 3
+    ExplicitTop = 44
     object TabSheet1: TTabSheet
       Caption = 'Consulta'
       object gridConsulta: TDBGrid
@@ -115,6 +116,7 @@ object frmMainPadrao: TfrmMainPadrao
         Width = 713
         Height = 329
         Align = alClient
+        Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgConfirmDelete, dgCancelOnExit, dgTitleClick, dgTitleHotTrack]
         TabOrder = 0
         TitleFont.Charset = DEFAULT_CHARSET
         TitleFont.Color = clWindowText
@@ -127,6 +129,17 @@ object frmMainPadrao: TfrmMainPadrao
     object TabSheet2: TTabSheet
       Caption = 'Cadastro'
       ImageIndex = 1
+      object ScrollBox1: TScrollBox
+        Left = 0
+        Top = 0
+        Width = 713
+        Height = 329
+        Align = alClient
+        Enabled = False
+        TabOrder = 0
+        ExplicitWidth = 455
+        ExplicitHeight = 281
+      end
     end
   end
   object ImageList1: TImageList

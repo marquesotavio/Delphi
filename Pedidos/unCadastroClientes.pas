@@ -6,15 +6,40 @@ uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, unMainPadrao, Data.DB, System.Actions,
   Vcl.ActnList, System.ImageList, Vcl.ImgList, Vcl.Grids, Vcl.DBGrids,
-  Vcl.ComCtrls, Vcl.ExtCtrls, Vcl.ToolWin, Vcl.DBCtrls;
+  Vcl.ComCtrls, Vcl.ExtCtrls, Vcl.ToolWin, Vcl.DBCtrls, Vcl.StdCtrls, Vcl.Mask,
+  Vcl.Samples.Spin;
 
 type
   TfrmCadastroClientes = class(TfrmMainPadrao)
     DBNavigator1: TDBNavigator;
+    ed_codigoCliente: TSpinEdit;
+    ed_nomeCliente: TEdit;
+    ed_cpfCliente: TMaskEdit;
+    ed_cepCliente: TMaskEdit;
+    Label1: TLabel;
+    Label2: TLabel;
+    Label3: TLabel;
+    Label4: TLabel;
+    ed_ruaCliente: TEdit;
+    Label5: TLabel;
+    ed_cidadeCliente: TEdit;
+    Label6: TLabel;
+    ed_ufCliente: TEdit;
+    Label7: TLabel;
+    Label8: TLabel;
+    ed_telefoneCliente: TMaskEdit;
+    btLocalizar: TButton;
+    actLocalizar: TAction;
+    Label9: TLabel;
+    ed_obsCliente: TMemo;
     procedure FormCreate(Sender: TObject);
     procedure FormDestroy(Sender: TObject);
     procedure FormShow(Sender: TObject);
     procedure FormKeyPress(Sender: TObject; var Key: Char);
+    procedure actIncluirExecute(Sender: TObject);
+    procedure actAlterarExecute(Sender: TObject);
+    procedure actSalvarExecute(Sender: TObject);
+    procedure actExcluirExecute(Sender: TObject);
     private
     { Private declarations }
   public
@@ -34,20 +59,15 @@ uses unDmClientes;
 
 { TfrmCadastroClientes }
 
+
 procedure TfrmCadastroClientes.FormCreate(Sender: TObject);
 begin
  inherited;
  //criando o datamodule de Clientes para uso
  if not Assigned(dmClientes) then
  dmClientes:= TdmClientes.Create(nil);
- dsCadastro.DataSet:= dmClientes.cdsClientes;
-end;
 
-procedure TfrmCadastroClientes.FormKeyPress(Sender: TObject; var Key: Char);
-begin
-  inherited;
-  if (Key = #27) and (Assigned(dmClientes)) then
-  Close;
+ dsCadastro.DataSet:= dmClientes.cdsClientes;
 end;
 
 procedure TfrmCadastroClientes.FormDestroy(Sender: TObject);
@@ -65,6 +85,65 @@ begin
  dmClientes.cdsClientes.Open;
 end;
 
+procedure TfrmCadastroClientes.FormKeyPress(Sender: TObject; var Key: Char);
+begin
+  inherited;
+  if (Key = #27) and (Assigned(dmClientes)) then
+  Close;
+end;
+
+procedure TfrmCadastroClientes.actAlterarExecute(Sender: TObject);
+begin
+  inherited;
+  dmClientes.cdsClientes.Edit;
+end;
+
+procedure TfrmCadastroClientes.actExcluirExecute(Sender: TObject);
+begin
+  inherited;
+    inherited;
+  if MessageDlg('Deseja mesmo excluir o registro?', mtConfirmation,
+     [mbYes, mbNo], 0) = mrYes then
+  begin
+    dmClientes.cdsClientes.Delete;
+    dmClientes.cdsClientes.ApplyUpdates(0);
+  end;
+end;
+
+procedure TfrmCadastroClientes.actIncluirExecute(Sender: TObject);
+begin
+  inherited;
+  // coloco o dataset no modo de inclusao
+  dmClientes.cdsClientes.Append;
+
+end;
+
+procedure TfrmCadastroClientes.actSalvarExecute(Sender: TObject);
+begin
+  inherited;
+  if (dmClientes.cdsClientes.State=dsInsert) then
+  begin
+    dmClientes.cdsClientes.FieldByName('CLI_ID').AsInteger:= ed_codigoCliente.Value;
+    dmClientes.cdsClientes.FieldByName('CLI_NOME').AsString:= ed_nomeCliente.Text;
+    dmClientes.cdsClientes.FieldByName('CLI_CPF').AsString:= ed_cpfCliente.Text;
+    dmClientes.cdsClientes.FieldByName('CLI_TELEFONE').AsString:= ed_telefoneCliente.Text;
+    dmClientes.cdsClientes.FieldByName('CLI_OBSERVACAO').AsString:= ed_obsCliente.Text;
+    dmClientes.cdsClientes.FieldByName('CLI_CEP_ID').AsInteger:= 1;
+  end
+else if (dmClientes.cdsClientes.State=dsEdit) then
+begin
+    dmClientes.cdsClientes.FieldByName('CLI_NOME').AsString:= ed_nomeCliente.Text;
+    dmClientes.cdsClientes.FieldByName('CLI_CPF').AsString:= ed_cpfCliente.Text;
+    dmClientes.cdsClientes.FieldByName('CLI_TELEFONE').AsString:= ed_telefoneCliente.Text;
+    dmClientes.cdsClientes.FieldByName('CLI_OBSERVACAO').AsString:= ed_obsCliente.Text;
+    dmClientes.cdsClientes.FieldByName('CLI_CEP_ID').AsInteger:= 1;
+end;
+    // salvo em memoria
+    dmClientes.cdsClientes.Post;
+    // persisto no banco
+    if (dmClientes.cdsClientes.ChangeCount > 0) then
+      dmClientes.cdsClientes.ApplyUpdates(-1);
+end;
 
 end.
 

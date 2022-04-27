@@ -1,5 +1,0 @@
-inherited frmCadastroClientes: TfrmCadastroClientes
-  Caption = 'Cadastro Clientes'
-  PixelsPerInch = 96
-  TextHeight = 13
-end

@@ -35,6 +35,7 @@ type
     PageControl1: TPageControl;
     TabSheet1: TTabSheet;
     TabSheet2: TTabSheet;
+    ScrollBox1: TScrollBox;
     procedure actIncluirExecute(Sender: TObject);
     procedure actAlterarExecute(Sender: TObject);
     procedure actExcluirExecute(Sender: TObject);
@@ -63,6 +64,17 @@ implementation
 
 {$R *.dfm}
 
+procedure TfrmMainPadrao.DisplayHint(Sender: TObject);
+begin
+ //Mostrar os hint´s na barra de status
+ StatusBar.Panels[0].Text := 'Mensagem: '+Application.Hint;
+end;
+
+procedure TfrmMainPadrao.FormCreate(Sender: TObject);
+begin
+ Application.OnHint := DisplayHint;
+end;
+
 procedure TfrmMainPadrao.HabilitaBotoes;
 begin
   actIncluir.Enabled  := False;
@@ -73,9 +85,18 @@ begin
   actFechar.Enabled   := False;
 end;
 
+procedure TfrmMainPadrao.actIncluirExecute(Sender: TObject);
+begin
+ HabilitaBotoes;
+ PageControl1.ActivePage:=TabSheet2;
+ ScrollBox1.Enabled:= True;
+end;
+
 procedure TfrmMainPadrao.actAlterarExecute(Sender: TObject);
 begin
    HabilitaBotoes;
+   PageControl1.ActivePage:=TabSheet2;
+   ScrollBox1.Enabled:= True;
 end;
 
 procedure TfrmMainPadrao.actCancelarExecute(Sender: TObject);
@@ -86,6 +107,9 @@ begin
  actSalvar.Enabled := False;
  actCancelar.Enabled := False;
  actFechar.Enabled := True;
+
+ PageControl1.ActivePage:=TabSheet1;
+ ScrollBox1.Enabled:= False;
 end;
 
 procedure TfrmMainPadrao.actExcluirExecute(Sender: TObject);
@@ -99,9 +123,9 @@ begin
 begin
   actIncluir.Enabled  := True;
   actAlterar.Enabled  := True;
-  actExcluir.Enabled  := False;
-  actSalvar.Enabled   := False;
-  actCancelar.Enabled := False;
+  actExcluir.Enabled  := True;
+  actSalvar.Enabled   := True;
+  actCancelar.Enabled := True;
   actFechar.Enabled   := True;
   StatusBar.Panels[0].Text:=('Mensagem:');
   end;
@@ -112,13 +136,6 @@ begin
  close;
 end;
 
-procedure TfrmMainPadrao.actIncluirExecute(Sender: TObject);
-begin
- HabilitaBotoes;
-end;
-
-
-
 procedure TfrmMainPadrao.actSalvarExecute(Sender: TObject);
 begin
   actIncluir.Enabled := True;
@@ -127,6 +144,9 @@ begin
   actSalvar.Enabled := False;
   actCancelar.Enabled := False;
   actFechar.Enabled := True;
+
+  PageControl1.ActivePage:=TabSheet1;
+  ScrollBox1.Enabled:= False;
 end;
 
 procedure TfrmMainPadrao.gridConsultaDrawColumnCell(Sender: TObject;
@@ -145,19 +165,6 @@ begin
       gridConsulta.DefaultDrawDataCell(rect,Column.Field,state);
     end;
  end;
-end;
-
-
-
-procedure TfrmMainPadrao.DisplayHint(Sender: TObject);
-begin
- //Mostrar os hint´s na barra de status
- StatusBar.Panels[0].Text := 'Mensagem: '+Application.Hint;
-end;
-
-procedure TfrmMainPadrao.FormCreate(Sender: TObject);
-begin
- Application.OnHint := DisplayHint;
 end;
 
 procedure TfrmMainPadrao.FormClose(Sender: TObject; var Action: TCloseAction);

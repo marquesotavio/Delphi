@@ -14,6 +14,11 @@ type
     qrCep: TFDQuery;
     dspCep: TDataSetProvider;
     cdsCep: TClientDataSet;
+    cdsCepCEP_ID: TIntegerField;
+    cdsCepCEP_CEP: TStringField;
+    cdsCepCEP_RUA: TStringField;
+    cdsCepCEP_CIDADE: TStringField;
+    cdsCepCEP_UF: TStringField;
     procedure DataModuleCreate(Sender: TObject);
     private
     { Private declarations }

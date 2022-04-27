@@ -1,0 +1,25 @@
+object dmClientes: TdmClientes
+  OldCreateOrder = False
+  Height = 381
+  Width = 632
+  object qrClientes: TFDQuery
+    Active = True
+    Connection = dmConexao.FDConnection
+    SQL.Strings = (
+      'SELECT * FROM CLIENTE;')
+    Left = 56
+    Top = 24
+  end
+  object dspClientes: TDataSetProvider
+    DataSet = qrClientes
+    Left = 128
+    Top = 24
+  end
+  object cdsClientes: TClientDataSet
+    Aggregates = <>
+    Params = <>
+    ProviderName = 'dspClientes'
+    Left = 200
+    Top = 24
+  end
+end

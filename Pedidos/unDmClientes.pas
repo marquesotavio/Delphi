@@ -14,6 +14,13 @@ type
     qrClientes: TFDQuery;
     dspClientes: TDataSetProvider;
     cdsClientes: TClientDataSet;
+    cdsClientesCLI_ID: TIntegerField;
+    cdsClientesCLI_NOME: TStringField;
+    cdsClientesCLI_CPF: TStringField;
+    cdsClientesCLI_CEP_ID: TIntegerField;
+    cdsClientesCLI_TELEFONE: TStringField;
+    cdsClientesCLI_OBSERVACAO: TMemoField;
+    procedure DataModuleCreate(Sender: TObject);
   private
     { Private declarations }
   public
@@ -27,6 +34,20 @@ implementation
 
 {%CLASSGROUP 'Vcl.Controls.TControl'}
 
+uses unDmConexao;
+
 {$R *.dfm}
+
+procedure TdmClientes.DataModuleCreate(Sender: TObject);
+begin
+  //Comando sql de abertura de tabela
+ qrClientes.SQL.Clear;
+ qrClientes.SQL.Add('SELECT * FROM CLIENTE');
+
+ //Ligação dos componentes
+ qrClientes.Connection:= dmConexao.fdConnection;
+ dspClientes.DataSet:= qrClientes;
+ cdsClientes.ProviderName:= 'dspClientes';
+end;
 
 end.

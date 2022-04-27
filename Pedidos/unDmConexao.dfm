@@ -1,8 +1,8 @@
 object dmConexao: TdmConexao
   OldCreateOrder = False
   OnCreate = DataModuleCreate
-  Height = 383
-  Width = 542
+  Height = 431
+  Width = 642
   object FDConnection: TFDConnection
     Params.Strings = (
       
@@ -14,6 +14,7 @@ object dmConexao: TdmConexao
       'Port=3050'
       'CharacterSet=ISO8859_2'
       'DriverID=FBDriverLink')
+    Connected = True
     Left = 40
     Top = 24
   end
