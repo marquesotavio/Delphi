@@ -2,8 +2,8 @@ object frmDivisorTimes: TfrmDivisorTimes
   Left = 0
   Top = 0
   Caption = 'Divisor de Times'
-  ClientHeight = 343
-  ClientWidth = 641
+  ClientHeight = 452
+  ClientWidth = 719
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
