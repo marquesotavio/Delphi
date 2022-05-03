@@ -7,7 +7,7 @@ uses
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, unMainPadrao, Data.DB, System.Actions,
   Vcl.ActnList, System.ImageList, Vcl.ImgList, Vcl.Grids, Vcl.DBGrids,
   Vcl.ComCtrls, Vcl.ExtCtrls, Vcl.ToolWin, Vcl.DBCtrls, Vcl.StdCtrls, Vcl.Mask,
-  Vcl.Samples.Spin;
+  Vcl.Samples.Spin, xmldom, XMLIntf, XMLDoc;
 
 type
   TfrmCadastroClientes = class(TfrmMainPadrao)
@@ -15,16 +15,16 @@ type
     ed_codigoCliente: TSpinEdit;
     ed_nomeCliente: TEdit;
     ed_cpfCliente: TMaskEdit;
-    ed_cepCliente: TMaskEdit;
+    med_cepCliente: TMaskEdit;
     Label1: TLabel;
     Label2: TLabel;
     Label3: TLabel;
     Label4: TLabel;
-    ed_ruaCliente: TEdit;
+    ed_RuaCliente: TEdit;
     Label5: TLabel;
-    ed_cidadeCliente: TEdit;
+    ed_CidadeCliente: TEdit;
     Label6: TLabel;
-    ed_ufCliente: TEdit;
+    ed_UfCliente: TEdit;
     Label7: TLabel;
     Label8: TLabel;
     ed_telefoneCliente: TMaskEdit;
@@ -32,6 +32,10 @@ type
     actLocalizar: TAction;
     Label9: TLabel;
     ed_obsCliente: TMemo;
+    Label10: TLabel;
+    ed_BairroCliente: TEdit;
+    Label11: TLabel;
+    ed_IbgeCliente: TEdit;
     procedure FormCreate(Sender: TObject);
     procedure FormDestroy(Sender: TObject);
     procedure FormShow(Sender: TObject);
@@ -40,7 +44,9 @@ type
     procedure actAlterarExecute(Sender: TObject);
     procedure actSalvarExecute(Sender: TObject);
     procedure actExcluirExecute(Sender: TObject);
+    procedure actLocalizarExecute(Sender: TObject);
     private
+    procedure GetCEP(CEP: string);
     { Private declarations }
   public
     { Public declarations }
@@ -54,8 +60,6 @@ implementation
 {$R *.dfm}
 
 uses unDmClientes;
-
-
 
 { TfrmCadastroClientes }
 
@@ -84,6 +88,36 @@ begin
  inherited;
  dmClientes.cdsClientes.Open;
 end;
+
+procedure TfrmCadastroClientes.GetCEP(CEP: string);
+var
+ XMLDocument1: IXMLDocument;
+ raizXML :IXMLNode;
+ begin
+   XMLDocument1 := TXMLDocument.Create(nil);
+   try
+//     mmResultado.Clear;
+     XMLDocument1.FileName := 'https://viacep.com.br/ws/' + Trim(Cep) + '/xml/';
+     XMLDocument1.Active := true;
+//     mmResultado.lines.text := XMLDocument1.XML.Text;
+     raizXML := XMLDocument1.DocumentElement;
+
+     ed_RuaCliente.Text := raizXML.ChildNodes.FindNode('logradouro').Text;
+     ed_BairroCliente.Text := raizXML.ChildNodes.FindNode('bairro').Text;
+     ed_CidadeCliente.Text := raizXML.ChildNodes.FindNode('localidade').Text;
+     ed_UfCliente.Text := raizXML.ChildNodes.FindNode('uf').Text;
+     ed_IbgeCliente.Text := raizXML.ChildNodes.FindNode('ibge').Text;
+
+
+//     mmResultado.Lines.Add('Logradouro: ' + raizXML.ChildNodes.FindNode('logradouro').Text);
+//     mmResultado.Lines.Add('Bairro: ' + raizXML.ChildNodes.FindNode('bairro').Text);
+//     mmResultado.Lines.Add('Cidade: ' + raizXML.ChildNodes.FindNode('localidade').Text);
+//     mmResultado.Lines.Add('UF: ' + raizXML.ChildNodes.FindNode('uf').Text);
+//     mmResultado.Lines.Add('IBGE: ' + raizXML.ChildNodes.FindNode('ibge').Text);
+   finally
+     XMLDocument1 := nil;
+   end;
+ end;
 
 procedure TfrmCadastroClientes.FormKeyPress(Sender: TObject; var Key: Char);
 begin
@@ -116,6 +150,12 @@ begin
   // coloco o dataset no modo de inclusao
   dmClientes.cdsClientes.Append;
 
+end;
+
+procedure TfrmCadastroClientes.actLocalizarExecute(Sender: TObject);
+begin
+  inherited;
+  GetCEP(med_cepCliente.text);
 end;
 
 procedure TfrmCadastroClientes.actSalvarExecute(Sender: TObject);

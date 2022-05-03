@@ -5899,9 +5899,8 @@ object frmControlePedidos: TfrmControlePedidos
       10EDEB8E2A1B76918B6FCE3DE80164B70F26EDD8CF51535151CC5963253AD004
       9508B7025DFBB8CE714B033B4797CE73C66A5A0028A86E1A4503667DF145007F
       FFD9}
-    ExplicitTop = 55
-    ExplicitWidth = 867
-    ExplicitHeight = 372
+    ExplicitLeft = -8
+    ExplicitTop = 44
   end
   object ToolBar1: TToolBar
     AlignWithMargins = True

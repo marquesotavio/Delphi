@@ -1,42 +1,44 @@
 inherited frmCadastroClientes: TfrmCadastroClientes
   Align = alClient
   Caption = 'Cadastro de Clientes'
-  ClientHeight = 507
+  ClientHeight = 519
   ClientWidth = 786
   ShowHint = True
   OnShow = FormShow
+  ExplicitTop = -55
   ExplicitWidth = 802
-  ExplicitHeight = 546
+  ExplicitHeight = 558
   PixelsPerInch = 96
   TextHeight = 13
   inherited ToolBar2: TToolBar
     Width = 780
-    ExplicitWidth = 768
+    ExplicitWidth = 780
   end
   inherited Panel1: TPanel
     Width = 786
-    ExplicitWidth = 774
+    ExplicitWidth = 786
   end
   inherited StatusBar: TStatusBar
-    Top = 488
+    Top = 500
     Width = 786
     ParentShowHint = False
     ShowHint = True
-    ExplicitTop = 476
-    ExplicitWidth = 774
+    ExplicitTop = 488
+    ExplicitWidth = 786
   end
   inherited PageControl1: TPageControl
     Width = 786
-    Height = 414
+    Height = 426
+    ActivePage = TabSheet2
     ExplicitTop = 49
-    ExplicitWidth = 774
-    ExplicitHeight = 402
+    ExplicitWidth = 786
+    ExplicitHeight = 414
     inherited TabSheet1: TTabSheet
       ExplicitWidth = 778
-      ExplicitHeight = 386
+      ExplicitHeight = 398
       inherited gridConsulta: TDBGrid
         Width = 778
-        Height = 386
+        Height = 398
         DataSource = dsCadastro
         ParentShowHint = False
         ShowHint = True
@@ -44,16 +46,16 @@ inherited frmCadastroClientes: TfrmCadastroClientes
     end
     inherited TabSheet2: TTabSheet
       ExplicitWidth = 778
-      ExplicitHeight = 386
+      ExplicitHeight = 398
       inherited ScrollBox1: TScrollBox
         Width = 778
-        Height = 386
+        Height = 398
         TabOrder = 9
         ExplicitWidth = 778
         ExplicitHeight = 386
         object Label6: TLabel
-          Left = 378
-          Top = 148
+          Left = 144
+          Top = 188
           Width = 33
           Height = 13
           Caption = 'Cidade'
@@ -73,7 +75,7 @@ inherited frmCadastroClientes: TfrmCadastroClientes
           Caption = 'Nome do Cliente'
         end
         object Label3: TLabel
-          Left = 251
+          Left = 253
           Top = 56
           Width = 68
           Height = 13
@@ -81,7 +83,7 @@ inherited frmCadastroClientes: TfrmCadastroClientes
         end
         object Label4: TLabel
           Left = 6
-          Top = 192
+          Top = 230
           Width = 42
           Height = 13
           Caption = 'Telefone'
@@ -94,8 +96,8 @@ inherited frmCadastroClientes: TfrmCadastroClientes
           Caption = 'Rua'
         end
         object Label7: TLabel
-          Left = 506
-          Top = 148
+          Left = 272
+          Top = 188
           Width = 13
           Height = 13
           Caption = 'UF'
@@ -114,6 +116,20 @@ inherited frmCadastroClientes: TfrmCadastroClientes
           Height = 13
           Caption = 'Observa'#231#245'es'
         end
+        object Label10: TLabel
+          Left = 6
+          Top = 188
+          Width = 28
+          Height = 13
+          Caption = 'Bairro'
+        end
+        object Label11: TLabel
+          Left = 305
+          Top = 188
+          Width = 23
+          Height = 13
+          Caption = 'IBGE'
+        end
         object ed_obsCliente: TMemo
           Left = 8
           Top = 286
@@ -123,9 +139,25 @@ inherited frmCadastroClientes: TfrmCadastroClientes
             'ed_obsCliente')
           TabOrder = 0
         end
+        object ed_BairroCliente: TEdit
+          Left = 6
+          Top = 201
+          Width = 121
+          Height = 21
+          Color = clSilver
+          TabOrder = 1
+        end
+        object ed_IbgeCliente: TEdit
+          Left = 305
+          Top = 201
+          Width = 68
+          Height = 21
+          Color = clSilver
+          TabOrder = 2
+        end
       end
       object ed_codigoCliente: TSpinEdit
-        Left = 4
+        Left = 8
         Top = 24
         Width = 121
         Height = 22
@@ -136,7 +168,7 @@ inherited frmCadastroClientes: TfrmCadastroClientes
         Value = 0
       end
       object ed_nomeCliente: TEdit
-        Left = 4
+        Left = 8
         Top = 72
         Width = 235
         Height = 21
@@ -145,7 +177,7 @@ inherited frmCadastroClientes: TfrmCadastroClientes
         TabOrder = 1
       end
       object ed_cpfCliente: TMaskEdit
-        Left = 251
+        Left = 255
         Top = 72
         Width = 120
         Height = 21
@@ -154,8 +186,8 @@ inherited frmCadastroClientes: TfrmCadastroClientes
         TabOrder = 2
         Text = ''
       end
-      object ed_cepCliente: TMaskEdit
-        Left = 4
+      object med_cepCliente: TMaskEdit
+        Left = 8
         Top = 118
         Width = 77
         Height = 21
@@ -164,26 +196,26 @@ inherited frmCadastroClientes: TfrmCadastroClientes
         TabOrder = 3
         Text = ''
       end
-      object ed_ruaCliente: TEdit
-        Left = 4
+      object ed_RuaCliente: TEdit
+        Left = 8
         Top = 163
         Width = 368
         Height = 21
         Color = clSilver
         TabOrder = 5
       end
-      object ed_cidadeCliente: TEdit
-        Left = 378
-        Top = 163
+      object ed_CidadeCliente: TEdit
+        Left = 142
+        Top = 203
         Width = 122
         Height = 21
         Color = clSilver
         MaxLength = 2
         TabOrder = 6
       end
-      object ed_ufCliente: TEdit
-        Left = 506
-        Top = 163
+      object ed_UfCliente: TEdit
+        Left = 270
+        Top = 203
         Width = 31
         Height = 21
         CharCase = ecUpperCase
@@ -192,8 +224,8 @@ inherited frmCadastroClientes: TfrmCadastroClientes
         TabOrder = 7
       end
       object ed_telefoneCliente: TMaskEdit
-        Left = 6
-        Top = 211
+        Left = 8
+        Top = 247
         Width = 93
         Height = 21
         EditMask = '!\(999)00000-0000;0;'
@@ -202,13 +234,12 @@ inherited frmCadastroClientes: TfrmCadastroClientes
         Text = ''
       end
       object btLocalizar: TButton
-        Left = 88
+        Left = 92
         Top = 116
         Width = 94
         Height = 25
-        Caption = 'Localizar CEP'
+        Action = actLocalizar
         HotImageIndex = 6
-        ImageIndex = 6
         Images = ImageList1
         TabOrder = 4
       end
@@ -216,15 +247,14 @@ inherited frmCadastroClientes: TfrmCadastroClientes
   end
   object DBNavigator1: TDBNavigator [4]
     Left = 0
-    Top = 463
+    Top = 475
     Width = 786
     Height = 25
     Hint = '\'
     VisibleButtons = [nbFirst, nbPrior, nbNext, nbLast, nbRefresh]
     Align = alBottom
     TabOrder = 4
-    ExplicitTop = 451
-    ExplicitWidth = 774
+    ExplicitTop = 463
   end
   inherited ImageList1: TImageList
     Left = 560
@@ -506,6 +536,7 @@ inherited frmCadastroClientes: TfrmCadastroClientes
     object actLocalizar: TAction
       Caption = 'Localizar CEP'
       ImageIndex = 6
+      OnExecute = actLocalizarExecute
     end
   end
   inherited dsCadastro: TDataSource
