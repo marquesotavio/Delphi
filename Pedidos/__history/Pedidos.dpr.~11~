@@ -12,8 +12,7 @@ uses
   unFornecedores in 'unFornecedores.pas' {frmFornecedores},
   unDmFornecedores in 'unDmFornecedores.pas' {dmFornecedores: TDataModule},
   Vcl.Themes,
-  Vcl.Styles,
-  unTesteCep in 'unTesteCep.pas' {frmTesteCep};
+  Vcl.Styles;
 
 {$R *.res}
 
@@ -26,6 +25,5 @@ begin
   Application.CreateForm(TdmClientes, dmClientes);
   Application.CreateForm(TfrmFornecedores, frmFornecedores);
   Application.CreateForm(TdmFornecedores, dmFornecedores);
-  Application.CreateForm(TfrmTesteCep, frmTesteCep);
   Application.Run;
 end.
