@@ -42,12 +42,15 @@ type
     ToolButton11: TToolButton;
     Panel1: TPanel;
     Image1: TImage;
+    actTESTE: TAction;
+    ToolButton12: TToolButton;
     procedure actSairExecute(Sender: TObject);
     procedure actCepExecute(Sender: TObject);
     procedure actClientesExecute(Sender: TObject);
     procedure actFornecedoresExecute(Sender: TObject);
     procedure FormCloseQuery(Sender: TObject; var CanClose: Boolean);
     procedure FormKeyPress(Sender: TObject; var Key: Char);
+    procedure actTESTEExecute(Sender: TObject);
     private
     { Private declarations }
   public
@@ -61,7 +64,7 @@ implementation
 
 {$R *.dfm}
 
-uses unCep, unCadastroClientes, unFornecedores;
+uses unCep, unCadastroClientes, unFornecedores, unTesteCep;
 
 
 procedure TfrmControlePedidos.actCepExecute(Sender: TObject);
@@ -85,6 +88,12 @@ end;
 procedure TfrmControlePedidos.actSairExecute(Sender: TObject);
 begin
  Close;
+end;
+
+procedure TfrmControlePedidos.actTESTEExecute(Sender: TObject);
+begin
+ Application.CreateForm(TfrmTesteCep, frmTesteCep);
+ frmTesteCep.ShowModal;
 end;
 
 procedure TfrmControlePedidos.FormCloseQuery(Sender: TObject;

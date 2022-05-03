@@ -1,0 +1,62 @@
+unit unTesteCep;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, xmldom, XMLIntf, XMLDoc,
+  Vcl.Mask;
+
+type
+  TfrmTesteCep = class(TForm)
+    mmResultado: TMemo;
+    Label1: TLabel;
+    btPesquisaCep: TButton;
+    medCep: TMaskEdit;
+    procedure btPesquisaCepClick(Sender: TObject);
+
+  private
+    procedure GetCEP(CEP: string);
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  frmTesteCep: TfrmTesteCep;
+
+implementation
+
+{$R *.dfm}
+
+procedure TfrmTesteCep.btPesquisaCepClick(Sender: TObject);
+begin
+ GetCEP(medCep.text);
+end;
+
+procedure TfrmTesteCep.GetCEP(CEP: string);
+ var
+ XMLDocument1: IXMLDocument;
+ raizXML :IXMLNode;
+ begin
+   XMLDocument1 := TXMLDocument.Create(nil);
+   try
+     mmResultado.Clear;
+     XMLDocument1.FileName := 'https://viacep.com.br/ws/' + Trim(Cep) + '/xml/';
+     XMLDocument1.Active := true;
+     mmResultado.lines.text := XMLDocument1.XML.Text;
+     raizXML := XMLDocument1.DocumentElement;
+   finally
+     XMLDocument1 := nil;
+   end;
+ end;
+
+
+{
+procedure TfrmTesteCep.medCepKeyPress(Sender: TObject; var Key: Char);
+begin
+ if (Key = #13) and (Assigned(frmTesteCep)) then
+  btPesquisaCepClick;
+end;
+}
+end.

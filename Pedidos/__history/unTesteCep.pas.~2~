@@ -1,0 +1,54 @@
+unit unTesteCep;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, xmldom, XMLIntf, XMLDoc;
+
+type
+  TfrmTesteCep = class(TForm)
+    edCep: TEdit;
+    mmResultado: TMemo;
+    Label1: TLabel;
+    btPesquisaCep: TButton;
+    procedure btPesquisaCepClick(Sender: TObject);
+  private
+    procedure GetCEP(CEP: string);
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  frmTesteCep: TfrmTesteCep;
+
+implementation
+
+{$R *.dfm}
+
+procedure TfrmTesteCep.btPesquisaCepClick(Sender: TObject);
+begin
+ GetCEP(edCep.text);
+end;
+
+procedure TfrmTesteCep.GetCEP(CEP: string);
+ var
+ XMLDocument1: IXMLDocument;
+ raizXML :IXMLNode;
+ begin
+   XMLDocument1 := TXMLDocument.Create(nil);
+   try
+     mmResultado.Clear;
+     XMLDocument1.FileName := 'https://viacep.com.br/ws/' + Trim(Cep) + '/xml/';
+     XMLDocument1.Active := true;
+     mmResultado.lines.text := XMLDocument1.XML.Text;
+     raizXML := XMLDocument1.DocumentElement;
+   finally
+     XMLDocument1 := nil;
+   end;
+ end;
+
+
+
+end.

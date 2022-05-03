@@ -1,0 +1,48 @@
+object frmTESTE: TfrmTESTE
+  Left = 0
+  Top = 0
+  Caption = 'TESTE CEP'
+  ClientHeight = 296
+  ClientWidth = 660
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Label1: TLabel
+    Left = 56
+    Top = 53
+    Width = 19
+    Height = 13
+    Caption = 'CEP'
+  end
+  object edCep: TEdit
+    Left = 56
+    Top = 72
+    Width = 121
+    Height = 21
+    TabOrder = 0
+  end
+  object mmResultado: TMemo
+    Left = 56
+    Top = 99
+    Width = 385
+    Height = 182
+    Lines.Strings = (
+      'mmResultado')
+    TabOrder = 1
+  end
+  object btPesquisaCep: TButton
+    Left = 183
+    Top = 70
+    Width = 82
+    Height = 25
+    Caption = 'Pesquisar CEP'
+    TabOrder = 2
+    OnClick = btPesquisaCepClick
+  end
+end
