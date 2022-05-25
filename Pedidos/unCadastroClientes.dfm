@@ -5,7 +5,6 @@ inherited frmCadastroClientes: TfrmCadastroClientes
   ClientWidth = 786
   ShowHint = True
   OnShow = FormShow
-  ExplicitTop = -55
   ExplicitWidth = 802
   ExplicitHeight = 558
   PixelsPerInch = 96
@@ -23,7 +22,7 @@ inherited frmCadastroClientes: TfrmCadastroClientes
     Width = 786
     ParentShowHint = False
     ShowHint = True
-    ExplicitTop = 488
+    ExplicitTop = 500
     ExplicitWidth = 786
   end
   inherited PageControl1: TPageControl
@@ -32,7 +31,7 @@ inherited frmCadastroClientes: TfrmCadastroClientes
     ActivePage = TabSheet2
     ExplicitTop = 49
     ExplicitWidth = 786
-    ExplicitHeight = 414
+    ExplicitHeight = 426
     inherited TabSheet1: TTabSheet
       ExplicitWidth = 778
       ExplicitHeight = 398
@@ -52,7 +51,7 @@ inherited frmCadastroClientes: TfrmCadastroClientes
         Height = 398
         TabOrder = 9
         ExplicitWidth = 778
-        ExplicitHeight = 386
+        ExplicitHeight = 398
         object Label6: TLabel
           Left = 144
           Top = 188
@@ -254,7 +253,6 @@ inherited frmCadastroClientes: TfrmCadastroClientes
     VisibleButtons = [nbFirst, nbPrior, nbNext, nbLast, nbRefresh]
     Align = alBottom
     TabOrder = 4
-    ExplicitTop = 463
   end
   inherited ImageList1: TImageList
     Left = 560

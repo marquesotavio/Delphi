@@ -5899,6 +5899,7 @@ object frmControlePedidos: TfrmControlePedidos
       10EDEB8E2A1B76918B6FCE3DE80164B70F26EDD8CF51535151CC5963253AD004
       9508B7025DFBB8CE714B033B4797CE73C66A5A0028A86E1A4503667DF145007F
       FFD9}
+    Stretch = True
     ExplicitLeft = -8
     ExplicitTop = 44
   end
@@ -6343,7 +6344,6 @@ object frmControlePedidos: TfrmControlePedidos
     object actTESTE: TAction
       Caption = 'TESTE'
       ImageIndex = 5
-      OnExecute = actTESTEExecute
     end
   end
 end
