@@ -60,50 +60,50 @@ inherited frmFornecedores: TfrmFornecedores
         end
         object Label6: TLabel
           Left = 18
-          Top = 200
+          Top = 224
           Width = 95
           Height = 13
           Caption = 'FOR_OBSERVACAO'
           FocusControl = DBEdit6
         end
         object Label8: TLabel
-          Left = 6
-          Top = 102
+          Left = 18
+          Top = 90
           Width = 19
           Height = 13
           Caption = 'CEP'
         end
         object Label4: TLabel
-          Left = 6
-          Top = 148
+          Left = 18
+          Top = 109
           Width = 19
           Height = 13
           Caption = 'Rua'
         end
         object Label10: TLabel
-          Left = 6
-          Top = 188
+          Left = 15
+          Top = 157
           Width = 28
           Height = 13
           Caption = 'Bairro'
         end
         object Label7: TLabel
-          Left = 144
-          Top = 188
+          Left = 153
+          Top = 157
           Width = 33
           Height = 13
           Caption = 'Cidade'
         end
         object Label9: TLabel
-          Left = 272
-          Top = 188
+          Left = 281
+          Top = 157
           Width = 13
           Height = 13
           Caption = 'UF'
         end
         object Label11: TLabel
-          Left = 305
-          Top = 188
+          Left = 314
+          Top = 157
           Width = 23
           Height = 13
           Caption = 'IBGE'
@@ -146,7 +146,7 @@ inherited frmFornecedores: TfrmFornecedores
         end
         object DBEdit6: TDBEdit
           Left = 18
-          Top = 216
+          Top = 240
           Width = 264
           Height = 21
           DataField = 'FOR_OBSERVACAO'
@@ -154,20 +154,36 @@ inherited frmFornecedores: TfrmFornecedores
           TabOrder = 4
         end
         object ed_BairroCliente: TEdit
-          Left = 6
-          Top = 201
+          Left = 15
+          Top = 170
           Width = 121
           Height = 21
           Color = clSilver
           TabOrder = 5
         end
         object ed_IbgeCliente: TEdit
-          Left = 305
-          Top = 201
+          Left = 314
+          Top = 170
           Width = 68
           Height = 21
           Color = clSilver
           TabOrder = 6
+        end
+        object Edit1: TEdit
+          Left = 43
+          Top = 86
+          Width = 69
+          Height = 21
+          TabOrder = 7
+          Text = 'Edit1'
+        end
+        object Edit2: TEdit
+          Left = 18
+          Top = 128
+          Width = 121
+          Height = 21
+          TabOrder = 8
+          Text = 'Edit2'
         end
       end
     end

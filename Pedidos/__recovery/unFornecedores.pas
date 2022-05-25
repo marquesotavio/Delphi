@@ -29,6 +29,8 @@ type
     Label9: TLabel;
     ed_IbgeCliente: TEdit;
     Label11: TLabel;
+    Edit1: TEdit;
+    Edit2: TEdit;
   procedure FormCreate (Sender: TObject);
   procedure FormDestroy (Sender: TObject);
   procedure FormShow (Sender: TObject);
