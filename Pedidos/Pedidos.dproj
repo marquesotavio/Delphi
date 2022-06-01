@@ -141,8 +141,13 @@
             <FormType>dfm</FormType>
             <DesignClass>TDataModule</DesignClass>
         </DCCReference>
-        <DCCReference Include="unTesteCep.pas">
-            <Form>frmTesteCep</Form>
+        <DCCReference Include="unRecError.pas">
+            <Form>ReconcileErrorForm</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="unClasseFornec.pas"/>
+        <DCCReference Include="unFornecView.pas">
+            <Form>frmFornec</Form>
             <FormType>dfm</FormType>
         </DCCReference>
         <BuildConfiguration Include="Release">
