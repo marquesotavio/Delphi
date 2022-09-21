@@ -41,7 +41,7 @@ begin
  fdConnection.Params.DriverID := 'fbDriverlink';
  fdConnection.Params.Add('Server=127.0.0.1');
  fdConnection.Params.Add('Port=3050');
- fdConnection.Params.Database := 'Z:\projetos-git\delphi\projeto-controle-pedidos\Delphi\Pedidos\DbCurso.FDB';
+ fdConnection.Params.Database := 'C:\Users\otavi\OneDrive\Documentos\Projeto07\DB\DbCurso.FDB';
  fdConnection.Params.UserName := 'SYSDBA';
  fdConnection.Params.Password := 'masterkey';
  fdConnection.Params.Add('CharacterSet=ISO8859_2');

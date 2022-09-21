@@ -6,15 +6,14 @@ object dmConexao: TdmConexao
   object FDConnection: TFDConnection
     Params.Strings = (
       
-        'Database=Z:\projetos-git\delphi\projeto-controle-pedidos\Delphi\' +
-        'Pedidos\DbCurso.FDB'
+        'Database=C:\Users\otavi\OneDrive\Documentos\Projeto07\DB\DBCURSO' +
+        '.FDB'
       'User_Name=SYSDBA'
       'Password=masterkey'
-      'Server=127.0.0.1'
+      'Server=localhost'
       'Port=3050'
       'CharacterSet=ISO8859_2'
       'DriverID=FBDriverLink')
-    Connected = True
     Left = 40
     Top = 24
   end

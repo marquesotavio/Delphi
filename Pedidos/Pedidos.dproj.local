@@ -38,16 +38,41 @@
     <Transaction>2022/05/03 08:34:03.000.122,=Z:\projetos-git\delphi\projeto-controle-pedidos\Delphi\Pedidos\Unit1.pas</Transaction>
     <Transaction>2022/05/03 08:57:33.000.692,Z:\projetos-git\delphi\projeto-controle-pedidos\Delphi\Pedidos\Unit1.dfm=Z:\projetos-git\delphi\projeto-controle-pedidos\Delphi\Pedidos\unTesteCep.dfm</Transaction>
     <Transaction>2022/05/03 08:57:33.000.692,Z:\projetos-git\delphi\projeto-controle-pedidos\Delphi\Pedidos\Unit1.pas=Z:\projetos-git\delphi\projeto-controle-pedidos\Delphi\Pedidos\unTesteCep.pas</Transaction>
-    <Transaction>2022/05/25 08:24:33.068,Z:\projetos-git\delphi\projeto-controle-pedidos\Delphi\Pedidos\unTesteCep.pas=</Transaction>
-    <Transaction>2022/05/25 08:59:45.995,=Z:\projetos-git\delphi\projeto-controle-pedidos\Delphi\Pedidos\Unit1.pas</Transaction>
-    <Transaction>2022/05/25 09:56:52.631,=Z:\projetos-git\delphi\projeto-controle-pedidos\Delphi\Pedidos\Vcl.RecError.pas</Transaction>
-    <Transaction>2022/05/25 09:57:30.160,Z:\projetos-git\delphi\projeto-controle-pedidos\Delphi\Pedidos\unRecError.pas=Z:\projetos-git\delphi\projeto-controle-pedidos\Delphi\Pedidos\Vcl.RecError.pas</Transaction>
-    <Transaction>2022/05/25 09:57:30.160,Z:\projetos-git\delphi\projeto-controle-pedidos\Delphi\Pedidos\unRecError.dfm=Z:\projetos-git\delphi\projeto-controle-pedidos\Delphi\Pedidos\Vcl.RecError.dfm</Transaction>
-    <Transaction>2022/05/25 10:04:58.906,=Z:\projetos-git\delphi\projeto-controle-pedidos\Delphi\Pedidos\Unit1.pas</Transaction>
-    <Transaction>2022/05/25 10:06:09.803,Z:\projetos-git\delphi\projeto-controle-pedidos\Delphi\Pedidos\unClasseFornec.pas=Z:\projetos-git\delphi\projeto-controle-pedidos\Delphi\Pedidos\Unit1.pas</Transaction>
-    <Transaction>2022/05/25 11:09:13.518,=Z:\projetos-git\delphi\projeto-controle-pedidos\Delphi\Pedidos\Unit1.pas</Transaction>
-    <Transaction>2022/05/25 11:09:47.777,Z:\projetos-git\delphi\projeto-controle-pedidos\Delphi\Pedidos\unFornecView.dfm=Z:\projetos-git\delphi\projeto-controle-pedidos\Delphi\Pedidos\Unit1.dfm</Transaction>
-    <Transaction>2022/05/25 11:09:47.777,Z:\projetos-git\delphi\projeto-controle-pedidos\Delphi\Pedidos\unFornecView.pas=Z:\projetos-git\delphi\projeto-controle-pedidos\Delphi\Pedidos\Unit1.pas</Transaction>
-    <Transaction>2022/05/25 11:12:35.249,=Z:\projetos-git\delphi\projeto-controle-pedidos\Delphi\Pedidos\Unit2.pas</Transaction>
+    <Transaction>2022/05/25 08:24:33.000.068,Z:\projetos-git\delphi\projeto-controle-pedidos\Delphi\Pedidos\unTesteCep.pas=</Transaction>
+    <Transaction>2022/05/25 08:59:45.000.995,=Z:\projetos-git\delphi\projeto-controle-pedidos\Delphi\Pedidos\Unit1.pas</Transaction>
+    <Transaction>2022/05/25 09:56:52.000.631,=Z:\projetos-git\delphi\projeto-controle-pedidos\Delphi\Pedidos\Vcl.RecError.pas</Transaction>
+    <Transaction>2022/05/25 09:57:30.000.160,Z:\projetos-git\delphi\projeto-controle-pedidos\Delphi\Pedidos\unRecError.pas=Z:\projetos-git\delphi\projeto-controle-pedidos\Delphi\Pedidos\Vcl.RecError.pas</Transaction>
+    <Transaction>2022/05/25 09:57:30.000.160,Z:\projetos-git\delphi\projeto-controle-pedidos\Delphi\Pedidos\unRecError.dfm=Z:\projetos-git\delphi\projeto-controle-pedidos\Delphi\Pedidos\Vcl.RecError.dfm</Transaction>
+    <Transaction>2022/05/25 10:04:58.000.906,=Z:\projetos-git\delphi\projeto-controle-pedidos\Delphi\Pedidos\Unit1.pas</Transaction>
+    <Transaction>2022/05/25 10:06:09.000.803,Z:\projetos-git\delphi\projeto-controle-pedidos\Delphi\Pedidos\unClasseFornec.pas=Z:\projetos-git\delphi\projeto-controle-pedidos\Delphi\Pedidos\Unit1.pas</Transaction>
+    <Transaction>2022/05/25 11:09:13.000.518,=Z:\projetos-git\delphi\projeto-controle-pedidos\Delphi\Pedidos\Unit1.pas</Transaction>
+    <Transaction>2022/05/25 11:09:47.000.777,Z:\projetos-git\delphi\projeto-controle-pedidos\Delphi\Pedidos\unFornecView.dfm=Z:\projetos-git\delphi\projeto-controle-pedidos\Delphi\Pedidos\Unit1.dfm</Transaction>
+    <Transaction>2022/05/25 11:09:47.000.777,Z:\projetos-git\delphi\projeto-controle-pedidos\Delphi\Pedidos\unFornecView.pas=Z:\projetos-git\delphi\projeto-controle-pedidos\Delphi\Pedidos\Unit1.pas</Transaction>
+    <Transaction>2022/05/25 11:12:35.000.249,=Z:\projetos-git\delphi\projeto-controle-pedidos\Delphi\Pedidos\Unit2.pas</Transaction>
   </Transactions>
+	<ProjectSortOrder AutoSort="0" SortType="0">
+    <File Path="unCadastroClientes.pas"/>
+    <File Path="unCadastroClientes.dfm"/>
+    <File Path="unCep.pas"/>
+    <File Path="unCep.dfm"/>
+    <File Path="unClasseFornec.pas"/>
+    <File Path="unDmCep.pas"/>
+    <File Path="unDmCep.dfm"/>
+    <File Path="unDmClientes.pas"/>
+    <File Path="unDmClientes.dfm"/>
+    <File Path="unDmConexao.pas"/>
+    <File Path="unDmConexao.dfm"/>
+    <File Path="unDmFornecedores.pas"/>
+    <File Path="unDmFornecedores.dfm"/>
+    <File Path="unFornecedores.pas"/>
+    <File Path="unFornecedores.dfm"/>
+    <File Path="unFornecView.pas"/>
+    <File Path="unFornecView.dfm"/>
+    <File Path="unMainPadrao.pas"/>
+    <File Path="unMainPadrao.dfm"/>
+    <File Path="unPedidos.pas"/>
+    <File Path="unPedidos.dfm"/>
+    <File Path="unRecError.pas"/>
+    <File Path="unRecError.dfm"/>
+  </ProjectSortOrder>
 </BorlandProject>
